@@ -20,7 +20,7 @@ class App extends Component {
 render() {
    console.log('App.js render');
    return (<div className="App">
-       <h1>React life cycle for create and update props by parent</h1>
+       <h1>React life cycle for create and update</h1>
        <h3>check life cycle methodss in console.log</h3>
        <button onClick={this.buttonClickHandler}>Click to change state</button>
        <Child text={this.state.text}/>
