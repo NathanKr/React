@@ -21,8 +21,9 @@ render() {
    console.log('App.js render');
    return (<div className="App">
        <h1>React life cycle for create and update</h1>
-       <h3>check life cycle methodss in console.log</h3>
-       <button onClick={this.buttonClickHandler}>Click to change state</button>
+       <h3>check life cycle methods in console.log</h3>
+       <button onClick={this.buttonClickHandler}>Click to change state and cause update</button>
+       <br/>
        <Child text={this.state.text}/>
      </div>);}
 

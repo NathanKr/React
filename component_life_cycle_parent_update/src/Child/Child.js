@@ -12,7 +12,7 @@ class Child extends Component{
 
    render(){
        console.log('Child.js render');
-       return <h2>this is child component : {this.props.text}</h2>
+       return <h2 className='Child'>this is child component : {this.props.text}</h2>
    }
 
    componentDidMount(){ 
