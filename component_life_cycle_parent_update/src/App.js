@@ -52,7 +52,7 @@ render() {
 
 
   componentDidUpdate(){
-        console.log('App.js componentDidUpdate');
+        console.log('UPDATE App.js componentDidUpdate');
     }
 }
 export default App;
