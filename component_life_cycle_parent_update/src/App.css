@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  border : 2px solid black;
+}
+
+.Child {
+  border : 2px solid blue;
+  display: inline-block;
+  margin : 20px;
+  padding : 10px;
+  color : brown;
+}
+
