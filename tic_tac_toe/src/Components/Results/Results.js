@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 function Results(props)
 {
-    const styleTable = {width:'100%' };
+    const styleTable = {width: Constants.getTableAndCanvasWidth()+'px' };
     let styleUserO,styleUserX;
     if(props.currentUser === Constants.getO())
     {

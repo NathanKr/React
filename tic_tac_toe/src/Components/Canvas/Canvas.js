@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Lines from '../Lines'
+import Constants from '../../Common/Constants'
 
 /*
     i am using here class NOT because i have state field
@@ -43,18 +44,25 @@ class Canvas extends Component {
               ctx.strokeStyle = 'red';
               ctx.lineWidth = 4;
               const lines = new Lines();
-              { /* get lines.LineTypeRow3 dynamically */}
-              lines.DrawLine(ctx,400,400,this.props.winLineType);
+              lines.DrawLine( ctx,
+                              Constants.getTableAndCanvasWidth(),
+                              Constants.getTableAndCanvasHeight(),
+                              this.props.winLineType);
           }
           else{
-              ctx.clearRect(0, 0, 400, 400);
+              ctx.clearRect(0, 0, 
+                            Constants.getTableAndCanvasWidth(),
+                            Constants.getTableAndCanvasHeight());
           }
       }
     }
 
     render() {
       return (
-        <canvas style={this.styleCanvas} width={400} height={400} ref={(canvasDom) => {
+        <canvas style={this.styleCanvas} 
+                        width={Constants.getTableAndCanvasWidth()}
+                        height={Constants.getTableAndCanvasHeight()} 
+                        ref={(canvasDom) => {
          this.canvasDom = canvasDom;
       }} />
       );

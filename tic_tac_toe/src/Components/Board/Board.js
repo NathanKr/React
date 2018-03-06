@@ -2,11 +2,15 @@ import React from 'react';
 import './Board.css'
 import PropTypes from 'prop-types'; 
 import Canvas from '../Canvas/Canvas'
+import Constants from '../../Common/Constants'
 
 
 function Board(props)
 {
-    const styleTable = {  position:'absolute' , width:'400px' , height:'400px' };//todo nath take dynamically
+    const styleTable = {    position:'absolute' , 
+                            width:Constants.getTableAndCanvasWidth()+'px' ,
+                            height:Constants.getTableAndCanvasHeight()+'px' 
+                        };
     
 
     const helper = (_className,row,index) => {
@@ -69,7 +73,6 @@ function Board(props)
                 </tbody>
             </table>
 
-           { /* get 400 , 400 todo nath do it dynamically */}
             <Canvas winLineType={props.winLineType}/>
         </div>
     )

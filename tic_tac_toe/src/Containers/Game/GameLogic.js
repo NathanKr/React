@@ -1,5 +1,5 @@
 import Constants from '../../Common/Constants';
-import Lines from '../../Components/Lines'
+import WinTypes from '../../Common/WinTypes'
 
 
 class GameLogic
@@ -57,19 +57,19 @@ class GameLogic
         const ar1dDiag2 = this.m_arBoardCloned.map((arRow,index) => arRow[2-index]);
           if(this.arrayAllItemAreSameAsCurrentUser(ar1dDiag1))
           {
-            return new Lines().LineTypeDiag1;
+            return WinTypes.getDiag1();
           } 
 
           if(this.arrayAllItemAreSameAsCurrentUser(ar1dDiag2))
           {
-            return new Lines().LineTypeDiag2;
+            return WinTypes.getDiag2();
           } 
 
           return null;
       }
   
       anyRowIsSame = () =>{
-        let arLineType = [new Lines().LineTypeRow1 , new Lines().LineTypeRow2 , new Lines().LineTypeRow3];
+        let arLineType = [WinTypes.getRow1() , WinTypes.getRow2() , WinTypes.getRow3()];
         for(let nRow=0; nRow<3; nRow++)
         {
           if(this.arrayAllItemAreSameAsCurrentUser(this.m_arBoardCloned[nRow])){
@@ -81,7 +81,7 @@ class GameLogic
       }
   
       anyColIsSame = () =>{
-        let arLineType = [new Lines().LineTypeCol1 , new Lines().LineTypeCol2 , new Lines().LineTypeCol3];
+        let arLineType = [WinTypes.getCol1() , WinTypes.getCol2() , WinTypes.getCol3()];
         for(let nCol=0; nCol<3; nCol++)
         {
           const ar1dBoardCol = this.m_arBoardCloned.map(arRow => arRow[nCol]);
