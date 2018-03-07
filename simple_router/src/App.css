@@ -11,3 +11,7 @@
   background-color: black;
   color:white;
 }
+
+.App a:hover { 
+  background-color: orange;
+}
