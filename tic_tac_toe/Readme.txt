@@ -1,5 +1,6 @@
 Features :
 - stateless and statefull component
+- dynamic styling
 - component life cycle
 - state and props
 - propTypes
