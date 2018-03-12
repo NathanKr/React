@@ -19,7 +19,7 @@ class App extends Component {
         <p>click 'Toggle Alert' to show \ hide message box</p>
         <p>click on message box 'Ok' to hide message box</p>
         <button onClick={this.btnClickHandler}>Toggle Alert</button>
-        <Alert hideHandler={this.hideHandler} show={this.state.showAlert}>this is some message</Alert>
+        <Alert hideHandler={this.hideHandler} show={this.state.showAlert}>this is some message !!!!!!!!!!!!</Alert>
       </div>
     );
   }
