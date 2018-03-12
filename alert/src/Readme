@@ -1,0 +1,6 @@
+initial for Alert as react component
+
+Todo :
+    - transition is not working on display
+    - too big text overflow horizontaly , vertically looks better
+    - need more styling to make it look nicer
