@@ -28,3 +28,4 @@ Todo
     - handle non html input like textarea , select    
     - use Form component
     - create the form components instances using loop over array of objects
+    - handle validation
