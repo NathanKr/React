@@ -4,15 +4,15 @@ import PropTypes from 'prop-types'
 class Alert extends Component
 {
     static getInfo(){
-        return "info"
+        return "info";
     }
 
     static getError(){
-        return "error"
+        return "error";
     }
 
     static getSuccess(){
-        return "success"
+        return "success";
     }
 
     btnClickHandler = () => {
@@ -25,7 +25,7 @@ class Alert extends Component
         switch(status)
         {
             case Alert.getSuccess() :
-            color = 'green';
+            color = 'Green';
             break;
 
             case Alert.getError() :
@@ -50,7 +50,8 @@ class Alert extends Component
         border:'2px solid black',
         boxShadow: '3px 3px'};
         
-        const styleBtnOk = {position:'absolute' , 
+        const styleBtnOk = {
+        position:'absolute' , 
         bottom:0, right:0 , 
         margin:'10px', padding:'5px' , 
         width:'70px',
