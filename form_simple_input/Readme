@@ -14,3 +14,10 @@ Props
                            a lot of flexibility. e.g. type can be used  
     - inputChangeHandler : html input change handler , has upper level state which has the
                            input value                            
+
+
+Limitation 
+    it is working with type='text' and type='password'
+    i have tested it also with type 'checkbox' and it is not working because evt.target.value does not fit.
+    In this case evt.target.value.checked might fit but it requires some small code change which is possible 
+    because type is known
