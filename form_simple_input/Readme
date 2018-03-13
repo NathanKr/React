@@ -1,0 +1,16 @@
+Input 
+------
+
+Input is a component which has two html elements :
+    - input 
+    - label
+
+
+All styling is done inline in Input.js because i do not use css module
+
+Props 
+    - labelText : this is the text of the html label element
+    - htmlInputArguments : these are the attributes of the html input element which give 
+                           a lot of flexibility. e.g. type can be used  
+    - inputChangeHandler : html input change handler , has upper level state which has the
+                           input value                            

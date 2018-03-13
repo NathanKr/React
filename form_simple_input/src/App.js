@@ -7,8 +7,7 @@ class App extends Component {
   
   // --- here you put the html properties of input
   htmlInputArgumentsPersonName = {
-    type:"text" ,
-    placeholder:"e.g. Nathan Krasney" , 
+    type:"checkbox" ,
     defaultValue:this.state.personName};
 
   htmlInputArgumentsPersonPassword = {
