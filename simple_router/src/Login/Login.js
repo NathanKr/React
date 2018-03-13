@@ -1,8 +1,14 @@
-import React from 'react';
+import React , { Component } from 'react';
 
-function Login()
-{
-    return <h2>Login</h2>;
+class Login extends Component {
+    componentDidMount()
+    {
+        console.log(this.props);
+    }
+
+    render() {
+      return <h2>Login</h2>;
+    }
 }
 
 export default Login;

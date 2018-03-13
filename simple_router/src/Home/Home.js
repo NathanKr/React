@@ -1,8 +1,14 @@
-import React from 'react';
+    import React , { Component } from 'react';
 
-function Home()
-{
-    return <h2>Home</h2>;
-}
+    class Home extends Component {
+        componentDidMount()
+        {
+            console.log(this.props);
+        }
 
-export default Home;
+        render() {
+        return <h2>Home</h2>;
+        }
+    }
+
+    export default Home;
