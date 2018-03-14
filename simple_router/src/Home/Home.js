@@ -1,10 +1,15 @@
-import React from 'react';
+    import React , { Component } from 'react';
+
+    class Home extends Component {
+        componentDidMount()
+        {
+            console.log(this.props);
+        }
 
 
-function Home(props)
-{
-    console.log(props);
-    return <h2>Home</h2>;
-}
+        render() {
+        return <h2>Home</h2>;
+        }
+    }
 
-export default Home;
+    export default Home;
