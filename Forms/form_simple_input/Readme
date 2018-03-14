@@ -28,4 +28,7 @@ Todo
     - handle non html input like textarea , select    
     - use Form component
     - create the form components instances using loop over array of objects
-    - handle validation
+    - handle validation : 
+        - show error indication per input
+        - change submit button color based on overall form validation
+        - do not allow submit based on overall form validation

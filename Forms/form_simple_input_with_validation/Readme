@@ -1,0 +1,46 @@
+this is a GENERIC PURPOSE form 
+--------------------------------
+
+Form
+    - can have few Input all configured in an array as props
+    - iterate arInputLogic to elegantly create the form
+
+Form Props
+    arInputLogic : array of InputLogic each for Input element
+    isFormValid : function which return true if form is valid and false otherwise
+    handleSubmit : function which is invoked when submit button is clicked (provided disabled is false)
+
+Input
+    Input is a component which has two html elements :
+        - input (it apply to text , password and also submit)
+        - label
+
+
+All styling is done inline in Input.js because i do not use css module
+
+Input Props 
+    - labelText : this is the text of the html label element
+    - htmlInputArguments : these are the attributes of the html input element which give 
+                           a lot of flexibility. e.g. type can be used  
+    - inputChangeHandler : html input change handler , has upper level state which has the
+                           input value     
+    - validationErrorHandler : function which return validation error for this input
+    - isFormValid : function which return is form valid                                                   
+
+
+Limitation 
+    - it is working with type='text' and type='password'
+    - i have tested it also with type 'checkbox' and it is not working because evt.target.value does not fit.
+      In this case evt.target.value.checked might fit but it requires some small code change which is possible 
+      because type is known
+
+
+Validation 
+    - each Input component (beside submit button) has an html p element which is used for validation error
+    - the submit button is disabled until the form is valid (via props.isFormValid of Form)
+    - the submit button change is color according to the value of isFormValid
+
+Todo
+    - handle not working input type like checkbox
+    - handle non html input like textarea , select    
+    
