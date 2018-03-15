@@ -1,5 +1,9 @@
 this is a GENERIC PURPOSE form 
 --------------------------------
+Basically no matter which form is needed it can be done using Form and these 3 props : 
+        - arInputLogic
+        - isFormValid
+        - handleSubmit
 
 Form
     - can have few Input all configured in an array as props

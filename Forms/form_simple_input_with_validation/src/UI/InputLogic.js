@@ -1,5 +1,6 @@
 class InputLogic{
-        constructor(inputType , inputChangeHandler,labelText,htmlInputAttributes,validationErrorHandler,content)
+
+    constructor(inputType , inputChangeHandler,labelText,htmlInputAttributes,validationErrorHandler,content)
     {
         this.inputType = inputType;
         this.inputChangeHandler = inputChangeHandler;

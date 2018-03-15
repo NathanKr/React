@@ -66,8 +66,6 @@ class App extends Component {
       }
 
       // ******** person gender config  
-     
-
       htmlInputArgumentsPersonGender = {
         defaultValue:this.state.personGender};
 
@@ -89,6 +87,7 @@ class App extends Component {
     return '';
   }     
  
+  // form level handlers
   handleSubmit = (event) => {
     event.preventDefault(); // added because we are not sending the page to the srver
     console.log(this.state);
@@ -112,7 +111,10 @@ class App extends Component {
                                   this.submitButtonValidationErrorHandler,null)];
   render() {
     return (
-      <div className="App">
+        // --- basically no matter which form is need it can be done using Form and these 3 props : 
+        // --- arInputLogic , isFormValid , handleSubmit
+        // --- while state is used inside it
+        <div className="App">
         <Form arInputLogic={this.arInputLogic} isFormValid={this.isFormValid} handleSubmit={this.handleSubmit}/>
       </div>
     );
