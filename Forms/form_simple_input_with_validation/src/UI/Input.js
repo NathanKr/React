@@ -19,7 +19,10 @@ function Input(props){
     switch(props.inputType){
         case InputType.getPureInput() :
         inputElement = <  input onChange= {(evt) =>{
-                                props.inputChangeHandler(evt.target.value);
+                                const value = htmlInputAttributesFixed.type !== 'checkbox' ?
+                                        evt.target.value :
+                                        evt.target.checked;
+                                props.inputChangeHandler(value);
                                 }} style={styleInput } {...htmlInputAttributesFixed} />;
         break;
 

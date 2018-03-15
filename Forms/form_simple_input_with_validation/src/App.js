@@ -17,7 +17,8 @@ class App extends Component {
   state = { personName : "" , 
             personPassword : "" ,
             personBiography : "" , 
-            personGender: this.arOptionLogic[0].htmlAttributes.value
+            personGender: this.arOptionLogic[0].htmlAttributes.value,
+            personHasSocialSecirity : true
           };
 
 
@@ -77,6 +78,19 @@ class App extends Component {
           return '';//can not be error because it is select
         }
   
+      // *******per has social security
+      htmlInputArgumentsPersonHasSocialSecurity = {
+        type:'checkbox' , 
+        defaultValue:this.state.personHasSocialSecirity};
+
+        inputPersonHasSocialSecurityChangeHandler = (personHasSocialSecurity) =>{
+          this.setState({personHasSocialSecirity : personHasSocialSecurity});
+        }
+
+        personHasSocialSecurityValidationErrorHandler = () =>{
+          return '';//can not be error because it is check box
+        }
+
 
   // submit button config      
   htmlInputArgumentsSubmit = {
@@ -107,6 +121,9 @@ class App extends Component {
                   new InputLogic( InputType.getSelect() , this.inputPersonGenderChangeHandler,'Gender',
                                   this.htmlInputArgumentsPersonGender,this.personGenderValidationErrorHandler,
                                   this.arOptionLogic),
+                  new InputLogic( InputType.getPureInput() , this.inputPersonHasSocialSecurityChangeHandler,'Has Social Security',
+                                  this.htmlInputArgumentsPersonHasSocialSecurity,this.personHasSocialSecurityValidationErrorHandler,
+                                  null),
                   new InputLogic( InputType.getPureInput() ,null,null,this.htmlInputArgumentsSubmit,
                                   this.submitButtonValidationErrorHandler,null)];
   render() {
