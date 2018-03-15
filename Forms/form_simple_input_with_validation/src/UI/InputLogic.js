@@ -1,14 +1,12 @@
 class InputLogic{
-    inputChangeHandler = null;
-    labelText = '';
-    htmlInputArguments = null;
-
-    constructor(inputChangeHandler,labelText,htmlInputArguments,validationErrorHandler)
+        constructor(inputType , inputChangeHandler,labelText,htmlInputAttributes,validationErrorHandler,content)
     {
+        this.inputType = inputType;
         this.inputChangeHandler = inputChangeHandler;
         this.labelText = labelText;
-        this.htmlInputArguments = htmlInputArguments;
+        this.htmlInputAttributes = htmlInputAttributes;
         this.validationErrorHandler = validationErrorHandler;
+        this.content = content;
     }
 }
 

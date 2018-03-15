@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import InputType from './InputType'
+import Option from './Option'
 
 function Input(props){
     const styleDiv = {padding : '15px'};
@@ -8,17 +10,44 @@ function Input(props){
     const styleValidationError = {color:'red'};
     const error = props.validationErrorHandler();
     var errorElement = error ? <p style={styleValidationError}>{error}</p> : '';
-    var htmlInputArgumentsFixed =  (props.htmlInputArguments.type !== 'submit') ?
-                                     {...props.htmlInputArguments } :
-                                     {...props.htmlInputArguments , ...{disabled : !props.isFormValid()} };
+    var htmlInputAttributesFixed =  (props.htmlInputAttributes.type !== 'submit') ?
+                                     {...props.htmlInputAttributes } :
+                                     {...props.htmlInputAttributes , ...{disabled : !props.isFormValid()} };
+
+    var inputElement = null;
+
+    switch(props.inputType){
+        case InputType.getPureInput() :
+        inputElement = <  input onChange= {(evt) =>{
+                                props.inputChangeHandler(evt.target.value);
+                                }} style={styleInput } {...htmlInputAttributesFixed} />;
+        break;
+
+        case InputType.getTextarea():
+        inputElement = <  textarea onChange= {(evt) =>{
+                            props.inputChangeHandler(evt.target.value);
+                            }} style={styleInput } {...htmlInputAttributesFixed} />;                            
+        break;
+
+        case InputType.getSelect():
+        inputElement =  <select  onChange= {(evt) =>{
+                        props.inputChangeHandler(evt.target.value);
+                        }} style={styleInput } {...htmlInputAttributesFixed}>
+                            {props.content.map((item,index) => {
+                                return <Option key={index} htmlAttributes={item.htmlAttributes}>{item.innerHTML}</Option>  
+                            })}
+                        </select>                              
+        break;
+
+
+        default:
+        inputElement = null;                          
+    }
 
     return(
-        
         <div style={styleDiv}>
             <label style={styleLabel}>{props.labelText}</label>
-            <input onChange= {(evt) =>{
-                    props.inputChangeHandler(evt.target.value);
-            }} style={styleInput } {...htmlInputArgumentsFixed} />
+            {inputElement}
             {errorElement}
         </div>
     )
@@ -27,10 +56,15 @@ function Input(props){
 export default Input;   
 
 Input.propTypes = { 
+    inputType : PropTypes.string, // InputType.getPureInput() ,  InputType.getTextarea() , InputType.getSelect()
     labelText : PropTypes.string,
-    htmlInputArgumentse : PropTypes.object,
+    htmlInputAttributes : PropTypes.object,
     inputChangeHandler : PropTypes.func,
     validationErrorHandler : PropTypes.func,
-    isFormValid : PropTypes.func
+    isFormValid : PropTypes.func,
+    /* -- content : info which is used to define innerHTML but format depend on InputType ,
+       -- currently it is needed for select
+    */
+    content : PropTypes.any 
  }
  

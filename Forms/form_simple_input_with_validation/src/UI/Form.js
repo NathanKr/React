@@ -9,11 +9,13 @@ return (
         {props.arInputLogic.map( (itemInputLogic,index) => {
           return  <Input   
                     key={index} // index is used because form does not change after creation
+                    inputType={itemInputLogic.inputType}
                     inputChangeHandler = {itemInputLogic.inputChangeHandler} 
                     labelText={itemInputLogic.labelText}
-                    htmlInputArguments = {itemInputLogic.htmlInputArguments}
+                    htmlInputAttributes = {itemInputLogic.htmlInputAttributes}
                     validationErrorHandler = {itemInputLogic.validationErrorHandler}
                     isFormValid = {props.isFormValid}
+                    content = {itemInputLogic.content}
                     /> 
         })};
     </form>)

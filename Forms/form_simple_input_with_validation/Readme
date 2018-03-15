@@ -12,24 +12,26 @@ Form Props
 
 Input
     Input is a component which has two html elements :
-        - input (it apply to text , password and also submit)
+        - input (it apply to text , password and also submit) or textarea or select
         - label
 
 
 All styling is done inline in Input.js because i do not use css module
 
+
 Input Props 
+    - inputType : input , textarea , select
     - labelText : this is the text of the html label element
-    - htmlInputArguments : these are the attributes of the html input element which give 
+    - htmlInputAttributes : these are the attributes of the html input element which give 
                            a lot of flexibility. e.g. type can be used  
     - inputChangeHandler : html input change handler , has upper level state which has the
                            input value     
     - validationErrorHandler : function which return validation error for this input
-    - isFormValid : function which return is form valid                                                   
+    - isFormValid : function which return is form valid        
+    - content : extra info used currently only for select :  array holding list of options                                           
 
 
 Limitation 
-    - it is working with type='text' and type='password'
     - i have tested it also with type 'checkbox' and it is not working because evt.target.value does not fit.
       In this case evt.target.value.checked might fit but it requires some small code change which is possible 
       because type is known
@@ -40,7 +42,7 @@ Validation
     - the submit button is disabled until the form is valid (via props.isFormValid of Form)
     - the submit button change is color according to the value of isFormValid
 
+
 Todo
-    - handle not working input type like checkbox
-    - handle non html input like textarea , select    
+    - handle not working input type - checkbox
     
