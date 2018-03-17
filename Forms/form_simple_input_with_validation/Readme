@@ -2,11 +2,12 @@ this is a GENERIC PURPOSE form
 --------------------------------
 Sample usage            
     a form to register a person is used to demonstrate the Form Design.
-    person has 4 properties :
+    person has 5 properties :
         - name -> html input with type='text' is used
         - password -> html input with type='password' is used
         - Biography -> html textarea is used
         - Gender -> html select is used
+        - has social security -> html with type='checkbox' is used
 
 
 Basically no matter which form is needed it can be done using Form component and these 3 props : 
