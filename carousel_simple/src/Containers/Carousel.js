@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import PropTypes from 'prop-types'
-import CarouselItem from './CarouselItem'
+import CarouselItem from '../Components/CarouselItem'
 
 
 class  Carousel extends Component
@@ -10,7 +10,7 @@ class  Carousel extends Component
     render()
     {
         const item = this.props.arCarouselItemLogic[this.state.currentItemIndex];
-        const arrowStyleCommon = {  margin : '10px' , top:'40%' , 
+        const arrowStyleCommon = { cursor: 'pointer' , margin : '10px' , top:'40%' , 
                                     position:'absolute' , fontSize:'200%'}; 
         const arrowStyleLeft = {...arrowStyleCommon}
         const arrowStyleRight = { ...arrowStyleCommon ,right:0 }; 

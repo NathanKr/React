@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CarouselItemLogic from './Components/CarouselItemLogic'
-import Carousel from './Components/Carousel'
+import Carousel from './Containers/Carousel'
 
 class App extends Component {
   styleDiv = {width:'600px', height:'400px'};
