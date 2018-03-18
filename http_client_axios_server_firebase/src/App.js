@@ -1,21 +1,66 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css';import axios from 'axios'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+ baseUrl = 'https://react-course-backend-53cce.firebaseio.com';
+ index = 0;
+ firbaseAddOn = '.json';
 
+ getCommon = (posts_or_blogs) => {
+   // -- json add because it is firebase
+  const url=this.baseUrl+'/'+posts_or_blogs+this.firbaseAddOn; 
+
+  axios.get(url).then(response =>{
+    this.index++;
+    console.log(response);
+   }).catch(error => {
+      console.log(error);
+     });
+  };
+
+ sendCommon = (posts_or_blogs) => {
+  const url=this.baseUrl+'/'+posts_or_blogs+this.firbaseAddOn; 
+  const objData = {Title        : posts_or_blogs+' title'+this.index ,
+                   Description  : posts_or_blogs+' description'+this.index };
+
+  axios.post(url,objData).then(response =>{
+    this.index++;
+    console.log(response);
+   }).catch(error => {
+      console.log(error);
+     });
+  };
+
+  sendPost = () =>{
+    this.sendCommon('posts');
+  }
+
+  sendBlog = () =>{
+    this.sendCommon('blogs');
+  }
+
+  getBlogs = () =>{
+    this.getCommon('blogs');
+  }
+
+  getPosts = () =>{
+    this.getCommon('posts');
+  }
+
+  
+
+  render() {
+   return (
+     <div className="App">
+       <h3>click button and check result in console</h3>
+       <button onClick={this.sendPost}>Send Post</button>
+       <button onClick={this.sendBlog}>Send Blog</button>
+       <button onClick={this.getPosts}>Get Posts</button>
+       <button onClick={this.getBlogs}>Get Blogs</button>
+     </div>
+   );}}
 export default App;
+
+
+
+
