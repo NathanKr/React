@@ -1,69 +1,146 @@
-this is a GENERIC PURPOSE form 
---------------------------------
-Sample usage            
-    a form to register a person is used to demonstrate the Form Design.
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>This is a GENERIC PURPOSE form </h3>
+
+<h4>Sample usage</h4>
+    <p>a form to register a person is used to demonstrate the Form Design</p>
+  
+  <h4>Person</h4>
     person has 5 properties :
-        - name -> html input with type='text' is used
-        - password -> html input with type='password' is used
-        - Biography -> html textarea is used
-        - Gender -> html select is used
-        - has social security -> html with type='checkbox' is used
-
-
+  <table border=1>
+  <tr>
+    <th>Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>html input with type='text' is used</td> 
+  </tr>
+  <tr>
+    <td>password</td>
+    <td>html input with type='password' is used</td> 
+  </tr>
+  <tr>
+    <td>Biography</td>
+    <td>html textarea is used</td> 
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>html select is used</td> 
+  </tr>  
+  <tr>
+    <td>has social security</td>
+    <td>html with type='checkbox' is used</td> 
+  </tr>  
+</table>
+  
+  <h4>Form component</h4>
 Basically no matter which form is needed it can be done using Form component and these 3 props : 
-        - arInputLogic
-        - isFormValid
-        - handleSubmit
+<ol>  
+  <li>arInputLogic</li>
+  <li>isFormValid</li>
+  <li>handleSubmit</li>
+</ol>
 
+component
+<ol>  
+  <li>can have few Input , all configured in an arInputLogic array as props</li>
+  <li>iterate arInputLogic to elegantly create the form</li>  
+</ol>  
 
-state
+Props  
+<table border=1>
+  <tr>
+    <th>Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>arInputLogic</td>
+    <td>array of InputLogic , each for Input element</td> 
+  </tr>
+  <tr>
+    <td>isFormValid</td>
+    <td>function which return true if form is valid and false otherwise</td> 
+  </tr>
+  <tr>
+    <td>handleSubmit</td>
+    <td>function which is invoked when submit button is clicked (provided disabled is false</td> 
+  </tr>
+</table>  
+  
+<h4>state</h4>
     state plays a crucial part in React in general and in this design in particular :
-        - person properties is stored in state
-        - state is set in per input inputChangeHandler
-        - state is get in isFormValid , handleSubmit
+<ol> 
+  <li>person properties is stored in state</li>
+  <li>state is set in per input inputChangeHandler</li>
+  <li>state is get in isFormValid , handleSubmit</li>
+</ol>
 
 
-Form component
-    - can have few Input , all configured in an arInputLogic array as props
-    - iterate arInputLogic to elegantly create the form
 
-Form Props
-    arInputLogic : array of InputLogic , each for Input element
-    isFormValid : function which return true if form is valid and false otherwise
-    handleSubmit : function which is invoked when submit button is clicked (provided disabled is false)
-
-Input component
+<h4>Input component</h4>
     Input is a component which has two html elements :
         - input (it apply to text , password and also submit) or textarea or select
         - label
 
 
+  <h4>Style</h4>
 All styling is done inline in Input.js because i do not use css module
 
 
-Input Props 
-    - inputType : input , textarea , select
-    - labelText : this is the text of the html label element
-    - htmlInputAttributes : these are the attributes of the html input element which give 
-                           a lot of flexibility. e.g. type can be used for html input
-    - inputChangeHandler : html input\textarea\select change handler , has upper level state which has the
-                           input value     
-    - validationErrorHandler : function which return validation error for this input
-    - isFormValid : function which return is form valid        
-    - content : extra info used currently only for select :  array holding list of options                                           
+<h4>Input Props </h4>
+<table border=1>
+  <tr>
+    <th>Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>inputType</td>
+    <td>input , textarea , select</td> 
+  </tr>
+  <tr>
+    <td>labelText</td>
+    <td>this is the text of the html label element</td> 
+  </tr>
+  <tr>
+    <td>htmlInputAttributes</td>
+    <td> : these are the attributes of the html input element which give 
+                           a lot of flexibility. e.g. type can be used for html input</td> 
+  </tr>
+  <tr>
+    <td>inputChangeHandler</td>
+    <td>html input\textarea\select change handler , has upper level state which has the
+                           input value</td> 
+  </tr>
+  <tr>
+    <td>validationErrorHandler </td>
+    <td>function which return validation error for this input
+    - isFormValid : function which return is form valid</td> 
+  </tr>
+  <tr>
+    <td>content</td>
+    <td>extra info used currently only for select :  array holding list of options</td> 
+  </tr>
+</table>   
 
-
-Limitation 
+<h4>Limitation </h4>
     i have tested it on chrome only using :
-        - input : text , password , checkbox
-        - select
-        - textarea
+  <ol>
+       <li>input : text , password , checkbox</li>
+        <li>select</li>
+        <li>textarea</li>
+  </ol>
 
-
-Validation 
-    - each Input component (beside submit button) has an html p element which is used for validation error
-    - the submit button is disabled until the form is valid (via props.isFormValid of Form)
-    - the submit button change is color according to the value of isFormValid
-
+<h4>Validation </h4>
+  <ol>
+    <li>each Input component (beside submit button) has an html p element which is used for validation error</li>
+    <li>the submit button is disabled until the form is valid (via props.isFormValid of Form)</li>
+   <li>the submit button change is color according to the value of isFormValid</li>
+</ol>
 
     
+  
+</body>
+</html>
