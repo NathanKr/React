@@ -5,6 +5,7 @@ class App extends Component {
  baseUrl = 'https://react-course-backend-53cce.firebaseio.com';
  index = 0;
  firbaseAddOn = '.json';
+ state = {error:''};
 
  getCommon = (posts_or_blogs) => {
    // -- json add because it is firebase
@@ -13,8 +14,9 @@ class App extends Component {
   axios.get(url).then(response =>{
     this.index++;
     console.log(response);
-   }).catch(error => {
-      console.log(error);
+   }).catch(err => {
+    console.log(err);
+    this.setState({error:err});
      });
   };
 
@@ -26,8 +28,9 @@ class App extends Component {
   axios.post(url,objData).then(response =>{
     this.index++;
     console.log(response);
-   }).catch(error => {
-      console.log(error);
+   }).catch(err => {
+      console.log(err);
+      this.setState({error:err});
      });
   };
 
@@ -52,11 +55,13 @@ class App extends Component {
   render() {
    return (
      <div className="App">
-       <h3>click button and check result in console</h3>
+       <h2>Data is saved on Firebase's NoSQL Realtime Database</h2>
+       <h3>click button and check result (data) in console</h3>
        <button onClick={this.sendPost}>Send Post</button>
        <button onClick={this.sendBlog}>Send Blog</button>
        <button onClick={this.getPosts}>Get Posts</button>
        <button onClick={this.getBlogs}>Get Blogs</button>
+       <p style={{color:'red'}}>{this.state.error ? JSON.stringify(this.state.error) : ''}</p>
      </div>
    );}}
 export default App;
