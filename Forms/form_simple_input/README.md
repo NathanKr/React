@@ -10,8 +10,8 @@ All styling is done inline in Input.js because i do not use css module
 
 Props 
     </br>- labelText : this is the text of the html label element
-    </br>- htmlInputArguments : these are the attributes of the html input element which give 
-                           a lot of flexibility. e.g. type can be used  
+    </br>- htmlInputArguments : these are the attributes of the html input element which give
+                           a lot of flexibility. e.g. type can be used
     </br>- inputChangeHandler : html input change handler , has upper level state which has the
                            input value                            
 
@@ -25,7 +25,7 @@ Limitation
 
 Todo
     </br>- handle not working input type like checkbox
-    </br>- handle non html input like textarea , select    
+    </br>- handle non html input like textarea , select
     </br>- use Form component
     </br>- create the form components instances using loop over array of objects
     </br>- handle validation : 
