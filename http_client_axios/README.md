@@ -1,5 +1,7 @@
-small sample of http client using axios
+<h3>small sample of http client using axios</h3>
 
-specific package installation :
-  - npm install axios
+<h4>specific package installation</h4>
+  <ul>
+    <li>npm install axios</li>
+  </ul>
  

@@ -1,17 +1,24 @@
-Features :
-- stateless and statefull component
-- dynamic styling
-- component life cycle
-- state and props
-- propTypes
-- advanced JS : map , filter , every , classes , arrow functions , spread operator 
-- event like onClick
-- css animation 
-- canvas    
-= refs
+
+<h3>Tic Tac Toe</h3>
+
+<h4>Features</h4>
+  <ol>
+    <li>stateless and statefull component</li>
+<li>dynamic styling</li>
+<li>component life cycle</li>
+<li>state and props</li>
+<li>propTypes</li>
+<li>advanced JS : map , filter , every , classes , arrow functions , spread operator </li>
+<li>event like onClick</li>
+<li>css animation </li>
+<li>canvas</li>    
+<li>refs</li>
+    </ol>
 
 
-Future :
-- deciding on draw is not optimal it wait for board to be full to decide this
-- css is not optimal . css module may be used instead
-- some code may be reduced in Board.js
+<h4>Future </h4>
+  <ul>
+<li>deciding on draw is not optimal it wait for board to be full to decide this</li>
+<li>css is not optimal . css module may be used instead</li>
+<li>some code may be reduced in Board.js</li>
+  </ul>
