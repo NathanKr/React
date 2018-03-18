@@ -37,20 +37,15 @@
 </table>
   
   <h4>Form component</h4>
-Basically no matter which form is needed it can be done using Form component and these 3 props : 
-<ol>  
-  <li>arInputLogic</li>
-  <li>isFormValid</li>
-  <li>handleSubmit</li>
-</ol>
-
-component
+Basically no matter which form is needed it can be done using Form component and its props
+  
+<h5>Component</h5>
 <ol>  
   <li>can have few Input , all configured in an arInputLogic array as props</li>
   <li>iterate arInputLogic to elegantly create the form</li>  
 </ol>  
 
-Props  
+<h5>Props</h5>
 <table border=1>
   <tr>
     <th>Name</th>
@@ -82,9 +77,10 @@ Props
 
 <h4>Input component</h4>
     Input is a component which has two html elements :
-        - input (it apply to text , password and also submit) or textarea or select
-        - label
-
+  <ol>
+    <li> input (it apply to text , password and also submit) or textarea or select</li>
+    <li> label</li>
+  </ol>
 
   <h4>Style</h4>
 All styling is done inline in Input.js because i do not use css module
