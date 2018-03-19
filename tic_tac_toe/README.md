@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
 
 <h3>Tic Tac Toe</h3>
 
@@ -22,3 +30,9 @@
 <li>css is not optimal . css module may be used instead</li>
 <li>some code may be reduced in Board.js</li>
   </ul>
+
+<h4>Preview</h4>
+<a href="https://www.youtube.com/embed/nnc5UWBazss">Click for Preview</>
+
+</body>
+</html>

@@ -136,7 +136,7 @@ All styling is done inline in Input.js because i do not use css module
    <li>the submit button change is color according to the value of isFormValid</li>
 </ol>
 
-    
+<a href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Preview</a>    
   
 </body>
 </html>
