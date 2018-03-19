@@ -19,3 +19,13 @@
   <li>npm install axios</li>
   <li>firebase project with user\password authentication is required</li>
 </ol>
+
+
+<h4>Future</h4>
+<ol>
+  <li>save token id and user id in local store</li>
+  <li>handle expire in client using timeout</li>
+  <li>generic authentication component (if possible) using callback : signIn , signOut , signUp </li>
+  <li>prevent non authorized used to access aothorized pages </li>
+  <li>authorization</li>
+</ol>
