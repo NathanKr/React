@@ -13,6 +13,7 @@
 <ol>
   <li>use to set post and blog using http POST</li>
   <li>use to get posts and blogs using http GET</li>
+  <li>error and loading indication are implemented</li>
 </ol>
 
 <h4>No Authentication</h4>
