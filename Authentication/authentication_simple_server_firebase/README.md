@@ -18,6 +18,7 @@
 <ol>
   <li>npm install axios</li>
   <li>firebase project with user\password authentication is required</li>
+  <li>apiKey in App.js should be updated accordig to the firebase project</li>
 </ol>
 
 
