@@ -1,4 +1,13 @@
-<h3>Authentication server firebase</h3>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+  <h3>Authentication server firebase</h3>
 
 <h4>Components</h4>
  <table border=1>
@@ -44,7 +53,7 @@
     </tr>
     <tr>
       <td>auth</td>
-      <td>token we get from firebase after success sign in</td>
+      <td>token we get from firebase after success sign in \ sign up</td>
     <tr>
 </table>    
 
@@ -62,3 +71,7 @@
 </ol>
 
 
+
+  
+</body>
+</html>
