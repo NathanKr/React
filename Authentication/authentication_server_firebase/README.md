@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-
-  <h3>Authentication server firebase</h3>
+<h3>Authentication against server firebase</h3>
 
 <h4>Components</h4>
  <table border=1>
@@ -71,7 +62,3 @@
 </ol>
 
 
-
-  
-</body>
-</html>
