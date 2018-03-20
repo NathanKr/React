@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+
+.App form{
+  width:400px;
+  margin: 50px;
+  border: 1px solid grey;
+  display: inline-block;
+}
+.App input , select {
+  padding:5px;
+  margin:15px;
+  width: 300px;
+  box-sizing: content-box;
+} 
+
+.App a{
+  display:inline-block;
+  width:150px;
+  margin:5px;
+  padding:8px;
+  font-weight: bold;
+  background-color:blue;
+  color:white;
+  border:1px solid black;
+  text-decoration: none;
+}
+
+.App a:hover{
+  background-color:lightseagreen;
+}

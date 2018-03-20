@@ -6,7 +6,7 @@ class App extends Component {
   //should be per project and private , this here is used for educational purposes only
   apiKey = 'AIzaSyCQpWjPQ8R30S2pbfUvp5uu4EqpRobaEps';
   arSign = [ 'signin' , 'signup']
-  state = {email:'' , password:'',sign:this.arSign[0]};
+  state = {email:'' , password:'',sign:this.arSign[0] , responseData:'',error:'',loading:''};
 
   
 
@@ -28,13 +28,15 @@ class App extends Component {
                       returnSecureToken:true};
      
     this.setState({error:''});                
-    this.setState({loading:'Loading...'});                
+    this.setState({loading:'Loading...'});       
+    this.setState({responseData:''});        
     
     axios.post(url,objData).then(response =>{
       this.setState({loading:''});
+      this.setState({responseData:response.data});        
       console.log(response);
      }).catch(err => {
-        console.log(err);
+        console.log(JSON.stringify(this.state.error));
         this.setState({loading:''});
         this.setState({error:err});
        });
@@ -46,6 +48,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <h2>Submit and check result in console</h2>
+      <h3>Users are saved on Firebase</h3>
       <form onSubmit={(evt) =>{
           evt.preventDefault();
           this.sign();
@@ -69,7 +73,8 @@ class App extends Component {
          <input type='submit' value='Submit'/>
        </form> 
        <p>{this.state.loading}</p>
-       <p style={{color:'red'}}>{this.state.error ? JSON.stringify(this.state.error) : ''}</p>        
+       <p style={{color:'red'}}>{this.state.error ? JSON.stringify(this.state.error) : ''}</p>    
+        {this.state.responseData ? <p>localId (user id) : {this.state.responseData.localId}</p> : '' }    
       </div>
     );
   }
