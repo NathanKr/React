@@ -1,5 +1,8 @@
 <h3>Authentication against server firebase</h3>
 
+<h4>Motivation</h4>
+<p>A simple skeleton for every react base application which uses authentication. this sample authenticate vs firebase but adjusting it to other server will not be dificult</p>
+
 <h4>Components</h4>
  <table border=1>
     <tr>

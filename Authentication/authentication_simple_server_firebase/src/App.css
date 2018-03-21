@@ -1,16 +1,18 @@
-.App  {
-  text-align: center
+.App {
+  width:80%;
+  margin: auto;
 }
 
 .App form{
-  margin: 50px;
-  display: inline-block;
+  border: 1px solid lightgrey;
+  padding:15px;
 }
+
 .App input , select {
-  margin:10px;
-  padding:5px;
-  display: inline-block;
-  width: 100%;
-  box-sizing: content-box;
+  width :100%;
+  padding:8px;
+  margin-top:15px; 
+  margin-bottom:15px;
+  box-sizing : border-box;
 }
 

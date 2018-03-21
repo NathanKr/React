@@ -61,7 +61,7 @@ class App extends Component {
            <option value={this.arSign[0]}>Sign In</option>
            <option value={this.arSign[1]}>Sign Up</option>
          </select>
-
+        
          <input onChange = {(evt) =>{
             this.setState({email:evt.target.value}) ;
          }} type='email' placeholder='email e.g. exp@msn.com'/>
