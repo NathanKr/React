@@ -6,9 +6,11 @@ import AuthStorage from '../Logic/AuthStorage'
 import { Redirect } from 'react-router';
 
 class SignCommon extends Component{
-    state={email:'' , password:'', error:'' , loading:''};
+    state={email:'2@gmail.com' , password:'123abc', error:'' , loading:''};
     auth = null;
     
+    
+
     sign = () =>{
         //signup : https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=[API_KEY]
         //signin : https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=[API_KEY]; 
@@ -29,7 +31,6 @@ class SignCommon extends Component{
         axios.post(url,objData).then(response =>{
           this.setState({loading:''});
           this.auth = response.data; // this is the token
-          this.props.setAuthState(this.auth);
           AuthStorage.setAuth(this.auth);
           console.log(response);
          }).catch(err => {
@@ -50,16 +51,16 @@ class SignCommon extends Component{
     {
         if(this.auth)
         {
-            return <Redirect to='/OnlyAuthenticated' />
+            return <Redirect to='/OnlyAuthenticated1' />
         }
 
         return (
             <div>
             <form onSubmit={this.onSubmitHandler}>
                 <input  type='email' onChange={(evt)=>{this.setState({email:evt.target.value})}} 
-                        placeholder='email e.g. 2@gmail.com'/>
+                        placeholder='email e.g. 2@gmail.com' value={this.state.email}/>
                 <input  type='password' onChange={(evt)=>{this.setState({password:evt.target.value})}} 
-                        placeholder='password e.g. 456abc'/>
+                        placeholder='password e.g. 456abc' value={this.state.password}/>
                 <input type='submit'value={this.props.isSignIn ? 'Sign In' : 'Sign Up'}/>
             </form>        
             <p>{this.state.loading}</p>
@@ -71,7 +72,6 @@ class SignCommon extends Component{
 
 
 SignCommon.propTypes = {
-    setAuthState : PropTypes.func ,
     isSignIn : PropTypes.bool // -- false means signup
 }
 

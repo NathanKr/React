@@ -1,7 +1,10 @@
 <h3>Authentication against server firebase</h3>
 
 <h4>Motivation</h4>
-<p>A simple skeleton for every react base application which uses authentication. this sample authenticate vs firebase but adjusting it to other server will not be dificult</p>
+<li>A simple skeleton for every React based application which uses authentication. this sample authenticate vs firebase but adjusting it to other server will not be dificult</li>
+<li>build a generic class - AuthStorage which handles persistence of auth and its expiration. with respect to AuthStorage class auth is an object that requires a key name expiresIn which is in seconds</li>
+</ol>
+
 
 <h4>Components</h4>
  <table border=1>
@@ -34,7 +37,11 @@
       <td>sign out page </td>
     <tr>
     <tr>
-      <td>OnlyAuthenticated</td>
+      <td>OnlyAuthenticated1</td>
+      <td>only authnticated users can see this page </td>
+    <tr>
+     <tr>
+      <td>OnlyAuthenticated2</td>
       <td>only authnticated users can see this page </td>
     <tr>
   </table>
@@ -54,7 +61,22 @@
 <h4>Routing</h4>
 <p>main menu allows to navigate to each component according to the auth state</p>
 
+<h4> class AuthStorage</h4>
+<ul>
+  <li>local storage operation are encapsulated in the class AuthStorage</li>
+  <li>AuthStorage recive setAuthState in init and use it in setAuth \ removeAuth</li>
+  <li>AuthStorage start a timer in setAuth which check expiration time every 60 sec and uppon expired use setAuthState(null)</li>
+  <li>AuthStorage invoke caller's expiredTimeHandler uppon token expiration</li>
+  <li>AuthStorage remove the timer in removeAuth</li>
+</ul>
 
+<h4>local storage</h4>
+<ul>
+  <li>new token is saved to local storage on success sign in and sign up</li>
+  <li>token is removed from local storage on sign out</li>
+  <li>token is get from storage in componentDidMount of App component so logged in user will not have to log again in case browser was closed</li>
+  <li>token in local storage is in sync with auth state</li>
+</ul>
 
 <h4>Specific package installation</h4>
 <ol>

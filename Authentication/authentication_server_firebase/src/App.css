@@ -3,12 +3,10 @@
 }
 
 
-
-
 .App form{
   border: 1px solid lightgrey;
   padding:15px;
-  margin:30px;
+  margin:50px 200px;
 }
 
 .App input , select {

@@ -3,9 +3,8 @@ import AuthStorage from '../Logic/AuthStorage';
 import { Redirect } from 'react-router';
 
 
-function SignOut(props){
+function SignOut(){
     AuthStorage.removeAuth();
-    props.setAuthState(null);
 
     return <Redirect to='/' />
 }

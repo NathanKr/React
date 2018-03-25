@@ -1,7 +1,9 @@
 import React from 'react'
+import SignCommon from './SignCommon'
 
 function SignUp(props){
-    return <p>SignUp component</p>;
+    return <SignCommon isSignUp={false}/>;
 }
 
-export default SignUp;
+
+export default SignUp

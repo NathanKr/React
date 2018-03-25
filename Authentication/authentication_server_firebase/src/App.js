@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './Components/Home'
-import SignCommon from './Components/SignCommon'
 import SignOut from './Components/SignOut'
-import OnlyAuthenticated from './Components/OnlyAuthenticated'
+import SignIn from './Components/SignIn'
+import SignUp from './Components/SignUp'
+import OnlyAuthenticated1 from './Components/OnlyAuthenticated1'
+import OnlyAuthenticated2 from './Components/OnlyAuthenticated2'
 
 
 import { BrowserRouter , Switch, Route, Link} from 'react-router-dom';
+import AuthStorage from './Logic/AuthStorage';
 
 class App extends Component {
 
-  state = {auth:''};
+   state = {auth:null};
 
-  setAuthState = (auth) => {
+   setAuthState = (auth) => {
     this.setState({auth:auth});
   }
-  
+
+ 
+ componentDidMount(){
+   console.log('component did mount');
+   console.log(AuthStorage.getAuth());
+   AuthStorage.init(this.setAuthState);
+ }
+
   getEmail = () =>{
     return this.state.auth.email;
   }
@@ -28,16 +38,18 @@ class App extends Component {
             {!this.state.auth ? <Link to={'/SignIn'}>Sign In</Link> : ''}
             {!this.state.auth ? <Link to={'/SignUp'}>Sign Up</Link> : '' }
             {this.state.auth ? <Link to={'/SignOut'}>Sign Out</Link> : ''}
-            {this.state.auth ? <Link to={'/OnlyAuthenticated'}>Authenticated</Link> : ''}
+            {this.state.auth ? <Link to={'/OnlyAuthenticated1'}>Authenticated1</Link> : ''}
+            {this.state.auth ? <Link to={'/OnlyAuthenticated2'}>Authenticated2</Link> : ''}
         <hr />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/SignIn'   render={() => <SignCommon isSignIn={true} 
-                                          setAuthState={this.setAuthState} />} />
-            <Route exact path='/SignOut' render={() => <SignOut setAuthState={this.setAuthState}    />} />
-            <Route exact path='/SignUp'  render={() => <SignCommon isSignIn={false} 
-                                          setAuthState={this.setAuthState} />} />
-            <Route exact path='/OnlyAuthenticated'  render={() => <OnlyAuthenticated getEmail={this.getEmail}/>}  />
+            <Route exact path='/SignIn'   render={() => <SignIn />} />
+            <Route exact path='/SignOut' render={() => <SignOut />} />
+            <Route exact path='/SignUp'  render={() => <SignUp />} />
+            <Route  exact path='/OnlyAuthenticated1'  render={() => <OnlyAuthenticated1 
+                    auth = {this.state.auth} getEmail={this.getEmail}/>}  />
+            <Route  exact path='/OnlyAuthenticated2'  render={() => <OnlyAuthenticated2 
+                    auth = {this.state.auth} getEmail={this.getEmail}/>}  />
           </Switch>
         </div>
       </BrowserRouter>
