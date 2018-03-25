@@ -60,7 +60,7 @@ class SignCommon extends Component{
                 <input  type='email' onChange={(evt)=>{this.setState({email:evt.target.value})}} 
                         placeholder='email e.g. 2@gmail.com' value={this.state.email}/>
                 <input  type='password' onChange={(evt)=>{this.setState({password:evt.target.value})}} 
-                        placeholder='password e.g. 456abc' value={this.state.password}/>
+                        placeholder='password e.g. 123abc' value={this.state.password}/>
                 <input type='submit'value={this.props.isSignIn ? 'Sign In' : 'Sign Up'}/>
             </form>        
             <p>{this.state.loading}</p>
