@@ -1,7 +1,7 @@
 <h3>Authentication against server firebase</h3>
 
 <h4>Motivation</h4>
-<li>A simple skeleton for every React based application which uses authentication. this sample authenticate vs firebase but adjusting it to other server will not be dificult</li>
+<li>build simple skeleton for every React based application which uses authentication. this sample authenticate vs firebase but adjusting it to other server will not be difficult</li>
 <li>build a generic class - AuthStorage which handles persistence of auth and its expiration. with respect to AuthStorage class auth is an object that requires a key name expiresIn which is in seconds</li>
 </ol>
 
@@ -42,7 +42,7 @@
     <tr>
      <tr>
       <td>OnlyAuthenticated2</td>
-      <td>only authnticated users can see this page </td>
+      <td>only authenticated users can see this page </td>
     <tr>
   </table>
 
@@ -50,7 +50,7 @@
 <table border=1>
     <tr>
       <th>state name</th>
-      <th>state desciption</th>
+      <th>state description</th>
     </tr>
     <tr>
       <td>auth</td>
