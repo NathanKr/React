@@ -66,7 +66,6 @@
   <li>local storage operation are encapsulated in the class AuthStorage</li>
   <li>AuthStorage recive setAuthState in init and use it in setAuth \ removeAuth</li>
   <li>AuthStorage start a timer in setAuth which check expiration time every 60 sec and uppon expired use setAuthState(null)</li>
-  <li>AuthStorage invoke caller's expiredTimeHandler uppon token expiration</li>
   <li>AuthStorage remove the timer in removeAuth</li>
 </ul>
 
