@@ -26,15 +26,15 @@
     <tr>
       <tr>
       <td>SignIn</td>
-      <td>sign in page with email and password. save token in local storage</td>
+      <td>sign in page with email and password. token is saved in local storage</td>
     <tr>
        <tr>
       <td>SignUp</td>
-      <td>sign up page with email and password</td>
+      <td>sign up page with email and password. token is saved in local storage</td>
     <tr>
       <tr>
       <td>SignOut</td>
-      <td>sign out page </td>
+      <td>sign out page. token is removed from local storage </td>
     <tr>
     <tr>
       <td>OnlyAuthenticated1</td>
