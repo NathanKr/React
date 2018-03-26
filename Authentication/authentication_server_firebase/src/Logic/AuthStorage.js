@@ -6,24 +6,23 @@ class AuthStorage{
         // --- localStorage can not save object properly so i first transfor it to json string and now i parse it back to object 
         const item = window.localStorage.getItem(this.key);
         const auth = (item && (item !== "undefined")) ? JSON.parse(item) : item;
-        console.log(auth);
+        console.log('auth : ',auth);
         return auth;
     }
 
     static isAuthValid(auth) {
         let minutesRemainingForExpiredAuth = -1;
 
-        if(auth && auth.keyExpiredTime){
-            const minutesRemainingForExpiredAuth = Math.round((auth.keyExpiredTime - Date.now())/1000/60);
+        if(auth && auth.hasOwnProperty('keyExpiredTime')){
+            minutesRemainingForExpiredAuth = Math.round((auth.keyExpiredTime - Date.now())/1000/60);
             console.log('minutes remaining for expired auth : '+minutesRemainingForExpiredAuth);
-            console.log('*'+auth,'**'+auth.keyExpiredTime,'***'+(minutesRemainingForExpiredAuth >= 0));
         }
 
-       // let bIsAuthValid = auth && auth.keyExpiredTime && (minutesRemainingForExpiredAuth >= 0);
 
-       // console.log('****'+bIsAuthValid);
+       const bIsValid = (minutesRemainingForExpiredAuth > 0);
+       console.log('is auth valid : ' + bIsValid);
         
-        return (minutesRemainingForExpiredAuth >= 0); 
+        return bIsValid; 
     }
 
     static init(setAuthState)
