@@ -10,38 +10,43 @@ class AuthStorage{
         return auth;
     }
 
-    static hasAuthTimeExpired() {
-        const auth = this.getAuth();
-        let minutesRemaining = -1;
+    static isAuthValid(auth) {
+        let minutesRemainingForExpiredAuth = -1;
 
         if(auth){
-            const minutesRemaining = (Date.now() - auth.keyExpiredTime)/1000/60;
-            console.log(minutesRemaining);
+            const minutesRemainingForExpiredAuth = Math.round((auth.keyExpiredTime - Date.now())/1000/60);
+            console.log('minutes remaining for expired auth : '+minutesRemainingForExpiredAuth);
         }
 
-        return ( !auth || !auth.keyExpiredTime || (minutesRemaining >= 0)); 
+        let bIsAuthValid = auth && auth.keyExpiredTime && (minutesRemainingForExpiredAuth >= 0);
+        bIsAuthValid = (bIsAuthValid != null)
+
+        return bIsAuthValid; 
     }
 
     static init(setAuthState)
     {
         this.setAuthState = setAuthState;
-        if(this.hasAuthTimeExpired()){
-            this.setAuth(null);
+        const auth = this.getAuth();
+        const authIsNew = false;
+
+        if(this.isAuthValid(auth)){
+
+            this.setAuth(auth,authIsNew);
         }
         else{
-            this.setAuth(this.getAuth);
+            this.setAuth(null,authIsNew);
         }
     }
 
-    static setAuth(auth){
+    static setAuth(auth , authIsNew){
         let extendedAuth = {...auth};
 
-        // --- i prefer to put it here because thats the only way i can hide it from user of AuthStorage
         const intervalMs = 60*1000;// --- check every minute
         // --- i prefer to put it here because thats the only way i can hide it from user of AuthStorage
         const intervalHandler = () =>{
             console.log('timer handler is invoked');
-            if(this.hasAuthTimeExpired()){
+            if(!this.isAuthValid(this.getAuth())){
                 console.log('Auth time has expired , timer is removed');
                 // --- remove timer
                 window.clearInterval(this.privatetimerHandle);
@@ -54,7 +59,7 @@ class AuthStorage{
         window.clearInterval(this.privatetimerHandle);// --- first remove previouse timer
         this.privatetimerHandle = window.setInterval(intervalHandler, intervalMs);
 
-        if(auth != null){
+        if(authIsNew){
             const nExpiredTime = Date.now() + auth.expiresIn*1000;// in milisecond since 1970
             const objAdd = {keyExpiredTime : nExpiredTime};
             extendedAuth = {...extendedAuth  , ...objAdd};

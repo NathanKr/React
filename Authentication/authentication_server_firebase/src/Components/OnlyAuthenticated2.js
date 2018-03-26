@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router';
+import AuthStorage from '../Logic/AuthStorage'
 
 function OnlyAuthenticated2(props){
-    if (!props.auth){ // --- this can happen due to AuthStorage timer expired
+    if (!AuthStorage.isAuthValid(props.auth)){ // --- this can happen due to AuthStorage timer expired
         return  <Redirect to='/SignIn' />
     }
 

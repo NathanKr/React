@@ -35,17 +35,17 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
             <Link to={'/'}>Home</Link>
-            {!this.state.auth ? <Link to={'/SignIn'}>Sign In</Link> : ''}
-            {!this.state.auth ? <Link to={'/SignUp'}>Sign Up</Link> : '' }
-            {this.state.auth ? <Link to={'/SignOut'}>Sign Out</Link> : ''}
-            {this.state.auth ? <Link to={'/OnlyAuthenticated1'}>Authenticated1</Link> : ''}
-            {this.state.auth ? <Link to={'/OnlyAuthenticated2'}>Authenticated2</Link> : ''}
+            {!AuthStorage.isAuthValid(this.state.auth) ? <Link to={'/SignIn'}>Sign In</Link> : ''}
+            {!AuthStorage.isAuthValid(this.state.auth) ? <Link to={'/SignUp'}>Sign Up</Link> : '' }
+            {AuthStorage.isAuthValid(this.state.auth) ? <Link to={'/SignOut'}>Sign Out</Link> : ''}
+            {AuthStorage.isAuthValid(this.state.auth) ? <Link to={'/OnlyAuthenticated1'}>Authenticated1</Link> : ''}
+            {AuthStorage.isAuthValid(this.state.auth) ? <Link to={'/OnlyAuthenticated2'}>Authenticated2</Link> : ''}
         <hr />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/SignIn'   render={() => <SignIn />} />
+            <Route exact path='/SignIn'   render={() => <SignIn auth = {this.state.auth} />} />
             <Route exact path='/SignOut' render={() => <SignOut />} />
-            <Route exact path='/SignUp'  render={() => <SignUp />} />
+            <Route exact path='/SignUp'  render={() => <SignUp auth = {this.state.auth} />} />
             <Route  exact path='/OnlyAuthenticated1'  render={() => <OnlyAuthenticated1 
                     auth = {this.state.auth} getEmail={this.getEmail}/>}  />
             <Route  exact path='/OnlyAuthenticated2'  render={() => <OnlyAuthenticated2 

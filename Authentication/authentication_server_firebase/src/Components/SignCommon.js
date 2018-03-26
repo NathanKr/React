@@ -6,9 +6,7 @@ import AuthStorage from '../Logic/AuthStorage'
 import { Redirect } from 'react-router';
 
 class SignCommon extends Component{
-    state={email:'' , password:'', error:'' , loading:''};
-    auth = null;
-    
+    state={email:'2@gmail.com' , password:'123abc', error:'' , loading:''};
     
 
     sign = () =>{
@@ -30,8 +28,9 @@ class SignCommon extends Component{
         
         axios.post(url,objData).then(response =>{
           this.setState({loading:''});
-          this.auth = response.data; // this is the token
-          AuthStorage.setAuth(this.auth);
+          const auth = response.data; // this is the token
+          const authIsNew = true;
+          AuthStorage.setAuth(auth , authIsNew);
           console.log(response);
          }).catch(err => {
             console.log(err);
@@ -49,7 +48,7 @@ class SignCommon extends Component{
     
     render()
     {
-        if(this.auth)
+        if(AuthStorage.isAuthValid(this.props.auth))
         {
             return <Redirect to='/OnlyAuthenticated1' />
         }
@@ -72,7 +71,8 @@ class SignCommon extends Component{
 
 
 SignCommon.propTypes = {
-    isSignIn : PropTypes.bool // -- false means signup
+    isSignIn : PropTypes.bool, // -- false means signup
+    auth :  PropTypes.object
 }
 
 export default SignCommon;
