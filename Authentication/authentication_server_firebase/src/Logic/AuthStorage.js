@@ -13,15 +13,17 @@ class AuthStorage{
     static isAuthValid(auth) {
         let minutesRemainingForExpiredAuth = -1;
 
-        if(auth){
+        if(auth && auth.keyExpiredTime){
             const minutesRemainingForExpiredAuth = Math.round((auth.keyExpiredTime - Date.now())/1000/60);
             console.log('minutes remaining for expired auth : '+minutesRemainingForExpiredAuth);
+            console.log('*'+auth,'**'+auth.keyExpiredTime,'***'+(minutesRemainingForExpiredAuth >= 0));
         }
 
-        let bIsAuthValid = auth && auth.keyExpiredTime && (minutesRemainingForExpiredAuth >= 0);
-        bIsAuthValid = (bIsAuthValid != null)
+       // let bIsAuthValid = auth && auth.keyExpiredTime && (minutesRemainingForExpiredAuth >= 0);
 
-        return bIsAuthValid; 
+       // console.log('****'+bIsAuthValid);
+        
+        return (minutesRemainingForExpiredAuth >= 0); 
     }
 
     static init(setAuthState)
