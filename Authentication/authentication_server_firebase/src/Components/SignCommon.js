@@ -6,7 +6,10 @@ import AuthStorage from '../Logic/AuthStorage'
 import { Redirect } from 'react-router';
 
 class SignCommon extends Component{
-    state={email:'2@gmail.com' , password:'123abc', error:'' , loading:''};
+    state={ email:this.props.isSignIn ? '2@gmail.com' : '' , 
+            password:this.props.isSignIn ? '123abc' : '',
+            error:'' , 
+            loading:''};
     
 
     sign = () =>{
