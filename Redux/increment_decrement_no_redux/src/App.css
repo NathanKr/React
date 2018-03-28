@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.App button {
+  padding : 8px;
+  margin:10px;
+  width:150px;
+  font-weight: bold;
+  background-color: darkblue;
+  color:white;
+  cursor: pointer;
+}
+
+.App button:hover { 
+  background-color: blue;
+}
