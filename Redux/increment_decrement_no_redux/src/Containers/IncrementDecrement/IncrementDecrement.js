@@ -13,6 +13,12 @@ class IncrementDecrement extends Component {
             <button onClick={() =>{
               this.setState({count:(this.state.count-1)});
             }}>Decrement</button>
+            <button onClick={() =>{
+              this.setState({count:(this.state.count+10)});
+            }}>Add 10</button>
+            <button onClick={() =>{
+              this.setState({count:(this.state.count-10)});
+            }}>Subtract 10</button>
             <p>count : {this.state.count}</p>
         </div>
     );
