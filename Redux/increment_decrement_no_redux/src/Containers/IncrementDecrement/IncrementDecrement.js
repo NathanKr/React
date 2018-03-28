@@ -9,16 +9,16 @@ class IncrementDecrement extends Component {
         <div>
             <button onClick={() =>{
               this.setState({count:(this.state.count+1)});
-            }}>Increment</button>
+            }}>Increment by 1</button>
             <button onClick={() =>{
               this.setState({count:(this.state.count-1)});
-            }}>Decrement</button>
+            }}>Decrement by 1</button>
             <button onClick={() =>{
               this.setState({count:(this.state.count+10)});
-            }}>Add 10</button>
+            }}>Fast Increment</button>
             <button onClick={() =>{
               this.setState({count:(this.state.count-10)});
-            }}>Subtract 10</button>
+            }}>Fast Decrement</button>
             <p>count : {this.state.count}</p>
         </div>
     );
