@@ -33,11 +33,7 @@ The project is react project but no components are used
   </tr>
 </table>
   
-  <>
-<li>Only javascript file in the project is index.js because react is not used</li>
-<li></li>
-</ul>
-
+ 
 <h4>Specific packages installation</h4>
 <ul>
   <li>npm install redux</li>
