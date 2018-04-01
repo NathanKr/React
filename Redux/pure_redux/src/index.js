@@ -1,36 +1,21 @@
 import {createStore} from 'redux'
-
-const addType = "ADD";
-const mulType = "MUL";
-
-// --- change state upon action
+const addType = "ADD";const mulType = "MUL"; let initialState = {count : 0};
 const reducer = (state,action) =>{
-    switch(action.type)
-    {
-        case addType :
-        state = state + action.value;
-        break;
-
-        case mulType :
-        state = state * action.value;
-        break;
-
-        default :
-        state = null;//not expected
-    }
-
-    return state;
+    let newCount;
+   switch(action.type){
+       case addType :
+       newCount = state.count + action.payLoad;break;
+       case mulType :
+       newCount = state.count * action.payLoad;break;
+       default :
+       newCount=state.count;
+   }return {...state , count: newCount};
 }
 
-let state = 0;
-
-const store = createStore(reducer,state);
-
-store.subscribe( () =>{
-    console.log("store has changed",store.getState());
-} );
-
+const store = createStore(reducer,initialState);
+store.subscribe( () =>{console.log("store has changed",store.getState());} );
 // --- action MUST be defined with type as key
-store.dispatch({type : addType , value : 3});
-store.dispatch({type : mulType , value : 2});
-store.dispatch({type : addType , value : -1});
+store.dispatch({type : addType , payLoad : 3});store.dispatch({type : mulType , payLoad : 2});
+store.dispatch({type : addType , payLoad : -1});
+
+ 
