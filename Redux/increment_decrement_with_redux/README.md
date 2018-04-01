@@ -3,4 +3,6 @@
 <h4>Specific packages installation</h4>
 <ul>
   <li>npm install redux</li>
+  <li>npm install react-redux</li>
+  <li>npm install prop-types</li>
 </ul>
