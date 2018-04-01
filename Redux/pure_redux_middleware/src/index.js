@@ -3,7 +3,7 @@ const addType = "ADD";
  let initialState = {count : 0};
 
 const logger = (store) => (next) => (action) => {
-    console.log("action fired : ",action);
+    console.log("LOGGER action fired : ",action);
     next(action);// call next otherwise reducer will not be called
 }
 
