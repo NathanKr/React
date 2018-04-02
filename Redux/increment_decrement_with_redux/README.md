@@ -1,3 +1,5 @@
+<h1>This application is in early stage , it is NOT working now so dont use it</h1>
+
 <h3>Increment Decrement with Redux</h3>
 
 <h4>Specific packages installation</h4>
