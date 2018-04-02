@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 function TodoListItem(props)
 {
-    return(<p onClick={props.clickHandler}>{
+    return(<li style={{margin:'10px'}} onClick={props.clickHandler}>{
                         props.children.todoIsActive ?
                         props.children.todoDescription :
-                        <del>{props.children.todoDescription}</del>}</p>);
+                        <del>{props.children.todoDescription}</del>}</li>);
 }
 
 TodoListItem.propTypes = {

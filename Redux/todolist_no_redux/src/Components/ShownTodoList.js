@@ -41,7 +41,7 @@ function ShownTodoList(props){
     );
     
 
-    return(<div>{elements}</div>);
+return(<ol style={{display:'inline-block'}}>{elements}</ol>);
 }
 
 ShownTodoList.propTypes = {
