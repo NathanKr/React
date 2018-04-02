@@ -14,7 +14,7 @@ reference to be compared with redux implementation
   </tr>
   <tr>
     <td>ToDoList</td>
-    <td>this is the root component it</td> 
+    <td>this is the root component</td> 
     <td>the list of todos and option selected</td>
     <td>non</td>
   </tr>
@@ -26,7 +26,7 @@ reference to be compared with redux implementation
   </tr>
   <tr>
     <td>ShownTodoList</td>
-    <td>This show the list according to the selected option</td> 
+    <td>This show the list according to the selected option and if its completed or not</td> 
     <td>none</td>
     <td>list and selcted option</td>
   </tr>
