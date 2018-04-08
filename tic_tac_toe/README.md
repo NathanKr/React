@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-
 <h3>Tic Tac Toe</h3>
+
+<h4>Requirements</h4>
+<ol>
+  <li>tic tac toe game</li>
+  <li>support new game</li>
+  <li>support history : # of wins , # of draws</li>
+  <li>provide easy to use UI e.g. one used in preview below</li>
+  <li>add shake effect</li>
+  <li>add line to mark winner</li>
+</ol>
 
 <h4>Features</h4>
   <ol>
