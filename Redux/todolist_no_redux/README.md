@@ -1,6 +1,16 @@
 
 <h3>Todo list no redux</h3>
 
+<h4>Requirements</h4>
+<ol>
+  <li>support add todo which is actually a string</li>
+  <li>support list of todos</li>
+  <li>click on todo in list toggle between active and completed</li>
+  <li>completed todo is shown with line over it</li>
+  <li>support button to show all todos , button to show active todos , button to show completed todos</li>
+</ol>
+
+
 <h4>Motivation</h4>
 reference to be compared with redux implementation
 
