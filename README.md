@@ -43,13 +43,13 @@
   </tr>
   <tr>
     <td>Advabced React Developer</td>
-    <td>Advanced can find usefull Authentication/authentication_server_firebase and Forms/form_simple_input_with_validation</td> 
+    <td>Advanced can find Authentication/authentication_server_firebase and Forms/form_simple_input_with_validation usefull</td> 
   </tr>
 </table>
   
 <h3>Where users can get help with your project</h3>
-  <p>contact me at natankrasney@gmail.com</p>
-<h3>Who maintains and contributes to the project</h3>
+  <p>contact me at natankrasney@gmail.com or via my linkedin account</p>
 
+<h3>Who maintains and contributes to the project</h3>
   <p>Nathan Krasney : https://il.linkedin.com/in/nathankrasney</p>
 .
