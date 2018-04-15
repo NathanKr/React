@@ -47,7 +47,7 @@
   </tr>
 </table>
   
-<h3>Where users can get help with your project</h3>
+<h3>Where users can get help with the project</h3>
   <p>contact me at natankrasney@gmail.com or via my linkedin account</p>
 
 <h3>Who maintains and contributes to the project</h3>
