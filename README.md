@@ -42,7 +42,7 @@
     <td>react_max_assignment_1 , react_max_assignment_2 , Redux/todolist_no_redux , tic_tac_toe , router example , axios examples , form examples , authentication examples</td> 
   </tr>
   <tr>
-    <td>Advabced React Developer</td>
+    <td>Advanced React Developer</td>
     <td>Advanced can find Authentication/authentication_server_firebase and Forms/form_simple_input_with_validation usefull</td> 
   </tr>
 </table>
