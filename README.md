@@ -39,7 +39,7 @@
   </tr>
   <tr>
     <td>Beginner React Developer</td>
-    <td>react_max_assignment_1 , react_max_assignment_2 , Redux/todolist_no_redux , tic_tac_toe , router example , axios examples , form examples , authentication examples</td> 
+    <td><ol><li>react_max_assignment_1</li><li>react_max_assignment_2 </li><li> Redux/todolist_no_redux </li><li> tic_tac_toe </li><li> router example </li><li> axios examples </li><li> form examples </li><li> authentication examples</li></ol></td> 
   </tr>
   <tr>
     <td>Advanced React Developer</td>
