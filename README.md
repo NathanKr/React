@@ -1,18 +1,18 @@
 <h3>What the project does</h3>
   This project is a collection of small projects i did as part of the learning curve which was required during my journey learning ReactJs.
-  It cover the following subjects
+  It covers the following subjects
   <ul>
     <li>Components</li>
     <li>Rendering</li>
     <li>Styling</li>
-    <li>Inernals</li>
+    <li>Internals</li>
     <li>Access the Web</li>
     <li>Routing</li>
     <li>Forms and Validation</li>
     <li>Authentication</li>
   </ul>  
   
-<h3>Why the project is useful and for who</h3>
+<h3>Why the project is useful and for whom</h3>
   <table border=1>
   <tr>
     <th>Audience</th>
@@ -20,11 +20,16 @@
   </tr>
   <tr>
     <td>Beginner React Developer</td>
-    <td>Beginner can find small examples to do and compare his solution with what i did. User that will do the examples in the order described below will have very good starting point developing React Apps</td> 
+    <td>Beginner can find small examples to do and compare his solution with what I did. The user that will do the examples in the order described below will have a very good starting point developing React Apps</td> 
   </tr>
   <tr>
-    <td>Advabced React Developer</td>
-    <td>Advanced can find Authentication/authentication_server_firebase and Forms/form_simple_input_with_validation usefull</td> 
+    <td>Advanced React Developer</td>
+    <td>Advanced can find 
+    <ol>
+    <li>An excellent starting project for every React project which uses authentication - Authentication/authentication_server_firebase</li>
+    <li>Generic & easy to use form component - Forms/form_simple_input_with_validation usefull</li>
+    </ol>
+    </td> 
   </tr>
 </table>
 
@@ -43,7 +48,12 @@
   </tr>
   <tr>
     <td>Advanced React Developer</td>
-    <td>Advanced can find Authentication/authentication_server_firebase and Forms/form_simple_input_with_validation usefull</td> 
+    <td>Advanced can find 
+    <ol>
+    <li>An excellent starting project for every React project which uses authentication - Authentication/authentication_server_firebase</li>
+    <li>Generic & easy to use form component - Forms/form_simple_input_with_validation usefull</li>
+    </ol>
+    </td> 
   </tr>
 </table>
   
