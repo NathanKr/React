@@ -1,6 +1,6 @@
 <h3>What the project does</h3>
-  This project is a collection of small projects i did as part of the learning curve which was required during my journey learning ReactJs. 
-  Each small project has its own ReadMe file
+  This project is a collection of small projects i did as part of the learning curve which was required during my journey learning ReactJs<br>
+  Each small project has its own ReadMe file<br>
   It covers the following subjects
   <ul>
     <li>Components</li>
