@@ -9,9 +9,9 @@
     <li>Internals</li>
     <li>Access the Web</li>
     <li>Routing</li>
-    <li>Forms and Validation <a href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Quick Preview</a>    
+    <li>Forms and Validation <a style='font-size:200%;' href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Quick Preview</a>    
 </li>
-    <li>Authentication <a href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a>
+    <li>Authentication <a style='font-size:200%;' href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a>
 </li>
   </ul>  
   
@@ -29,8 +29,8 @@
     <td>Advanced React Developer</td>
     <td>Advanced can find 
     <ol>
-    <li>An excellent starting project for every React project which uses authentication - Authentication/authentication_server_firebase <a href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a></li>
-    <li>Generic & easy to use form component - Forms/form_simple_input_with_validation usefull <a href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Quick Preview</a>    
+    <li>An excellent starting project for every React project which uses authentication - Authentication/authentication_server_firebase <a style='font-size:200%;' href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a></li>
+    <li>Generic & easy to use form component - Forms/form_simple_input_with_validation usefull <a style='font-size:200%;' href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Quick Preview</a>    
 </li>
     </ol>
     </td> 
