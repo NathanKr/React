@@ -9,7 +9,7 @@
     <li>Internals</li>
     <li>Access the Web</li>
     <li>Routing</li>
-    <li>Forms and Validation <a style='font-size:200%;' href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Quick Preview</a>    
+    <li>Forms and Validation <a style='font-size:200%; color:red;' href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Quick Preview</a>    
 </li>
     <li>Authentication <a style='font-size:200%;' href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a>
 </li>
