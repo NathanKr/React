@@ -1,5 +1,8 @@
 <h3>Authentication against server firebase</h3>
 
+<a href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a>
+
+
 <h4>Motivation</h4>
 <li>build simple skeleton for every React based application which uses authentication. this sample authenticate vs firebase but adjusting it to other server will not be difficult</li>
 <li>build a generic class - AuthStorage which handles persistence of auth and its expiration. with respect to AuthStorage class auth is an object that requires a key name expiresIn which is in seconds</li>

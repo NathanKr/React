@@ -1,6 +1,5 @@
 <h3>Authentication using Firebase</h3>
 
-<a href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a>
 
 <h4>Sign Up</h4>
 <ol>
