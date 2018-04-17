@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
-<body>
+
 
 <h3>This is a GENERIC PURPOSE form </h3>
+
+<a href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Quick Preview</a>    
+
 
 <h4>Sample usage</h4>
     <p>a form to register a person is used to demonstrate the Form Design</p>
@@ -136,7 +137,3 @@ All styling is done inline in Input.js because i do not use css module
    <li>the submit button change is color according to the value of isFormValid</li>
 </ol>
 
-<a href='https://www.youtube.com/watch?v=uSCW5rzTlN0'>Click for Preview</a>    
-  
-</body>
-</html>
