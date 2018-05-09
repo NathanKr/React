@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.book{
+  border : 2px solid black;
+  width : 200px;
+  margin : 10px;
+}
