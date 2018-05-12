@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
         <div className="App">
-          <h1>App component : provides user as context - {this.user.email}</h1>
+          <h2>App component - Provider : provides user as context - {this.user.email}</h2>
           <h3>User may be used in few components so it's convient to use as context</h3>
           {/* seems mandatory to use value (and ONLY value) as props */}
           <UserContext.Provider value={this.user}>
