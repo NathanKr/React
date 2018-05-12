@@ -3,9 +3,9 @@ Experiment with context in react . Context was introduced in version 16.3
 
 <h2>Context</h2>
 <ul>
-  <li>Context object is created using React.createContext and is assigned here to a variable name LangContext</li>
-  <li>Provider is defined using context object- LangContext.Provider</li>
-  <li>Consumer is defined using context object- LangContext.Consumer</li>
+  <li>Context object is created using React.createContext and is assigned here to a variable name UserContext</li>
+  <li>Provider is defined using context object- UserContext.Provider</li>
+  <li>Consumer is defined using context object- UserContext.Consumer</li>
   <li>Provider must wrap consumer component</li>
   <li>Only component that need context should consume it</li>
   <li>Seems mandatory to use value (and ONLY value) as props of the provider</li>
@@ -21,17 +21,17 @@ Experiment with context in react . Context was introduced in version 16.3
   </tr>
     <td>App</td>
     <td>Provider</td>
-    <td>Provide language as context and pass props : msg , children to Child</td>
+    <td>Provide user as context and pass props : msg , children to Child</td>
   </tr>
 </tr>
     <td>Child</td>
     <td>Consumer</td>
-    <td>Consume language as context . pass props : msg , children to ChildChild. Display props</td>
+    <td>Consume user as context . pass props : msg , children to ChildChild. Display props</td>
 </tr>
 </tr>
     <td>ChildChild</td>
     <td>Consumer</td>
-    <td>Consume language as context . Display props</td>
+    <td>Consume user as context . Display props</td>
   </tr>
 </table>
 

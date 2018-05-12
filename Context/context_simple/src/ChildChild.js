@@ -1,5 +1,5 @@
 import React from 'react';
-import {LangContext} from './LangContext';
+import {UserContext} from './UserContext';
 
 
 function ChildChild(props)
@@ -7,9 +7,9 @@ function ChildChild(props)
     return (
         <div>
             {/*  */}
-            <LangContext.Consumer>
-                {value => <p>context from App provider : {value}</p>}
-            </LangContext.Consumer>
+            <UserContext.Consumer>
+                {value => <p>context from App provider : {value.email}</p>}
+            </UserContext.Consumer>
             <h1>ChildChild component</h1>
             <h2>{props.msg} , {props.children}</h2>
         </div>
