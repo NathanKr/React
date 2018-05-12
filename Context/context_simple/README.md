@@ -25,8 +25,8 @@ Experiment with context in react . Context was introduced in version 16.3
   </tr>
 </tr>
     <td>Child</td>
-    <td>Consumer</td>
-    <td>Consume user as context . pass props : msg , children to ChildChild. Display props</td>
+    <td>None</td>
+    <td>Pass props : msg , children to ChildChild. Display props</td>
 </tr>
 </tr>
     <td>ChildChild</td>
