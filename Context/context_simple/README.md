@@ -1,9 +1,13 @@
 <h2>Motivation</h2>
 Experiment with context in react . Context was introduced in version 16.3
 
-<h2>Points of interest</h2>
+<h2>Context</h2>
 <ul>
-  <li>Provider must wrap consumer</li>
+  <li>Context object is created using React.createContext and is assigned here to a variable name LangContext</li>
+  <li>Provider is defined using context object- LangContext.Provider</li>
+  <li>Consumer is defined using context object- LangContext.Consumer</li>
+  <li>Provider must wrap consumer component</li>
+  <li>Only component that need context should consume it</li>
   <li>Seems mandatory to use value (and ONLY value) as props of the provider</li>
 </ul>
 
