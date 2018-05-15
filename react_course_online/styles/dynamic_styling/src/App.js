@@ -4,20 +4,17 @@ import './App.css';
 
 class App extends Component {
   state = {isBlue : true};
+
   render() {
-    
     const blueStyle = {color : 'blue'};
     const redStyle = {color : 'red'};
-    const clickHandler = () => {
-      const newIsBlue = !this.state.isBlue;
-      this.setState ({isBlue : newIsBlue});
+    const clickHandler = () =>{
+      this.setState({isBlue : !this.state.isBlue});
     }
     return (
       <div className="App">
-        <button onClick={clickHandler}
-               style = {this.state.isBlue ?
-                         blueStyle :
-                         redStyle}>ClickMe</button>
+        <button style={this.state.isBlue ? blueStyle : redStyle} 
+                onClick={clickHandler}>ClickMe</button>
       </div>
     );
   }
