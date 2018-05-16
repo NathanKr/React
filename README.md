@@ -67,4 +67,10 @@
 
 <h3>Who maintains and contributes to the project</h3>
   <p>Nathan Krasney : https://il.linkedin.com/in/nathankrasney</p>
-.
+
+<h3>More info on React</h3>
+<ul>
+  <li>https://reactjs.org/</li>
+  <li>React online course i am working on - due Late June 2018</li>
+</ul>
+
