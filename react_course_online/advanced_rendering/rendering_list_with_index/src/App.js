@@ -3,13 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  state = {movies : ['King Kong' , 'Harry Potter' , 'Godfather']};
   render() {
-    const elements = this.state.movies.map((movie,index) =>
+    const movies = ['King Kong' , 'Harry Potter' , 'Godfather'];
+    const elements = movies.map((movie,index) =>
      <p onClick={() => {
-      let tmpMovies = [...this.state.movies];
-      tmpMovies.splice(index,1);
-      this.setState({movies : tmpMovies});
+       console.log(index);
      }}>{index + 1} : {movie}</p>)
     return (
       <div className="App">
