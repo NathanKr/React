@@ -8,6 +8,7 @@ class App extends Component {
     
     return (
       <div className="App">
+        <h4>Look for logged props in console</h4>
         <Person name='Nathan Krasney' age={55}/>
       </div>
     );
