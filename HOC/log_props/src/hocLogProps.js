@@ -13,7 +13,7 @@ function hocLogProps(WrappedComponent) {
       }
 
       render() {
-        // Wraps the input component in a container, without mutating it. Good!
+        // Wraps the input component in a container, without mutating it.
         return <WrappedComponent {...this.props} />;
       }
     }

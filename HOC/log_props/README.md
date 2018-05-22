@@ -54,7 +54,8 @@
   
   
   <h2>React version</h2>
-    This was tested with react version 16.3
+    This was tested with react version 16.3.
+    In particular getDerivedStateFromProps used in hocLogProps is new in 16.3
   
   <h2>Creator</h2>
   Nathan Krasney
