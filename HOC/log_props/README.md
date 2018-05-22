@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
 <body>
   <h2>Project title</h2>
     Learning React HOC via tiny props logger 
@@ -31,7 +24,7 @@
   </tr>
   <tr>
     <td>hocLogProps</td>
-    <td>function</td> 
+    <td>Function</td> 
     <td>HOC function to be invoked on ANY component to create component with logged props. In this project it is invoked on Person</td> 
   </tr>
 </table>
@@ -68,4 +61,3 @@
   https://www.linkedin.com/in/nathankrasney/
   
 </body>
-</html>
