@@ -1,4 +1,3 @@
-<body>
   <h2>Project title</h2>
     Learning React HOC via tiny props logger 
   
@@ -31,7 +30,8 @@
   
   <h2>Show me some code</h2>
   hocLogProps.js : 
-  
+
+```javascript
   function hocLogProps(WrappedComponent) {
     return class extends React.Component {
       state = {};        
@@ -47,7 +47,7 @@
       }
     }
   }
-
+```
     
   <p>notice in Person.js : </p>
   <p>export default hocLogProps(Person);</p>
@@ -61,4 +61,3 @@
   <p>Nathan Krasney</p>
   <p>https://www.linkedin.com/in/nathankrasney/</p>
   
-</body>
