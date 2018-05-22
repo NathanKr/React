@@ -49,8 +49,11 @@
   }
 ```
     
-  <p>notice in Person.js : </p>
-  <p>export default hocLogProps(Person);</p>
+  notice in Person.js :
+  ```javascript
+  export default hocLogProps(Person);
+  ```
+
   
   
   <h2>React version</h2>
