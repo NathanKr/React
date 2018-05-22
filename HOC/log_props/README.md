@@ -49,16 +49,16 @@
   }
 
     
-  notice in Person.js
-  export default hocLogProps(Person);
+  <p>notice in Person.js : </p>
+  <p>export default hocLogProps(Person);</p>
   
   
   <h2>React version</h2>
-    This was tested with react version 16.3.
-    In particular getDerivedStateFromProps used in hocLogProps is new in 16.3
+    <p>This was tested with react version 16.3</p>
+    <p>In particular getDerivedStateFromProps used in hocLogProps is new in 16.3</p>
   
   <h2>Creator</h2>
-  Nathan Krasney
-  https://www.linkedin.com/in/nathankrasney/
+  <p>Nathan Krasney</p>
+  <p>https://www.linkedin.com/in/nathankrasney/</p>
   
 </body>
