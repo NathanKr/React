@@ -3,7 +3,7 @@ Experiment with context in react . Context was introduced in version 16.3
 
 <h2>Context in general</h2>
 <ul>
-  <li>Context object is created using React.createContext and is assigned here to a variable name UserContext</li>
+  <li>Context object is created using React.createContext</li>
   <li>Provider must wrap consumer component</li>
   <li>Only component that need context should consume it</li>
   <li>Seems mandatory to use value (and ONLY value) as props of the provider</li>
@@ -11,6 +11,7 @@ Experiment with context in react . Context was introduced in version 16.3
 
 <h2>Context in this project</h2>
 <ul>
+  <li>Context is assigned to a variable name UserContext</li>
   <li>Provider is defined using context object- UserContext.Provider</li>
   <li>Consumer is defined using context object- UserContext.Consumer</li>
 </ul>
