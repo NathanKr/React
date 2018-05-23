@@ -14,6 +14,7 @@
     <li>Authentication <a  href='https://www.youtube.com/watch?v=QJ-tABaRVEU'>Click Here for Preview</a>
     <li>Context</li>
 	<li>HOC</li>
+  <li>Ref</li>
 </li>
   </ul>  
   
@@ -50,7 +51,7 @@
   </tr>
   <tr>
     <td>Beginner React Developer</td>
-    <td><ol><li>react_max_assignment_1</li><li>react_max_assignment_2 </li><li> Redux/todolist_no_redux </li><li> tic_tac_toe </li><li> router example </li><li> axios examples </li><li> form examples </li><li> authentication examples</li><li> context examples</li><li>HOC examples</li></ol></td> 
+    <td><ol><li>react_max_assignment_1</li><li>react_max_assignment_2 </li><li> Redux/todolist_no_redux </li><li> tic_tac_toe </li><li> router example </li><li> axios examples </li><li> form examples </li><li> authentication examples</li><li> context examples</li><li>HOC examples</li><li>Ref examples</li></ol></td> 
   </tr>
   <tr>
     <td>Advanced React Developer</td>
