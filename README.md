@@ -75,3 +75,6 @@
   <li>React online course i am working on - due Late June 2018</li>
 </ul>
 
+
+<h3>License</h3>
+All projects in this React repository is MIT licensed.
