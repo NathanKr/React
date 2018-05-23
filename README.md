@@ -77,4 +77,4 @@
 
 
 <h3>License</h3>
-All projects in this React repository is MIT licensed.
+All projects in this React repository are MIT licensed.
