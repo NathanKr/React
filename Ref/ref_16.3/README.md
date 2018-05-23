@@ -18,15 +18,6 @@
   componentDidMount(){
     console.log("width : " ,this.myRef.current.style.width);
   }
-
- render() {
-   return (
-     <div className="App">
-        <h3>Check red rectangle width in console using ref</h3>
-        <div  style={this.style} ref={this.myRef}></div>
-     </div>
-   );
-  }
 ```
   
   
