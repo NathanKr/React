@@ -1,1 +1,0 @@
-<h3>small sample for component life cycle</h3>
