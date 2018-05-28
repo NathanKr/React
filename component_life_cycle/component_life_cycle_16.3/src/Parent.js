@@ -5,27 +5,27 @@ import Logic from './Logic';
 
 class Parent extends Component {
   state = {showChild : true , 
-    childProps : 1 ,
+    childPropsChildren : 1 ,
     shouldComponentUpdate : true ,
     DerivedStateTimeStamp : null};
   
-  static write(funcName,msg){
-    Logic.write("Parent",funcName,msg);
+  static write(funcName,ignore,msg){
+    Logic.write("Parent",funcName,ignore,msg);
   }
 
   constructor(props){
     super(props);
-    Parent.write("constructor");
+    Parent.write("constructor",false);
   }
 
   render() {
-    Parent.write("render");
+    Parent.write("render",false);
     const clickHandlerToggleShow = () =>{
       this.setState({showChild : !this.state.showChild});
     }
 
     const clickHandlerToggleProps = () => {
-      this.setState({childProps : this.state.childProps === 1 ? 2 : 1});
+      this.setState({childPropsChildren : this.state.childPropsChildren === 1 ? 2 : 1});
     } 
     
     
@@ -39,7 +39,9 @@ class Parent extends Component {
 
     const showChild = 
       this.state.showChild ?
-      <Child>{this.state.childProps}</Child> : 
+      <Child ignoreConsoleLessCommon={this.props.ignoreConsoleLessCommon}>
+        {this.state.childPropsChildren}
+      </Child> : 
       '';
 
     const buttonForceUpdate = <button onClick={() => {
@@ -69,6 +71,7 @@ class Parent extends Component {
   shouldComponentUpdate(){
     const shouldComponentUpdate = this.state.shouldComponentUpdate;
     Parent.write(   "shouldComponentUpdate" , 
+                    this.props.ignoreConsoleLessCommon,
                     "return : "+ shouldComponentUpdate);
     return shouldComponentUpdate;
 }
@@ -79,6 +82,8 @@ class Parent extends Component {
 static getDerivedStateFromProps(nextProps, prevState){
     const updatedState = {DerivedStateTimeStamp : Date.now()}; 
     Parent.write("getDerivedStateFromProps",
+    // used like this because i do not have this in static function
+    nextProps.ignoreConsoleLessCommon,
     {
         nextProps : nextProps, 
         prevState : prevState , 
@@ -93,12 +98,14 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
         prevProps : prevProps,
         prevState : prevState,
         snapshot : snapshot};
-    Parent.write("getSnapshotBeforeUpdate",args);
+    Parent.write( "getSnapshotBeforeUpdate",
+                  this.props.ignoreConsoleLessCommon,
+                  args);
     return args.snapshot;
 }
 
 componentDidMount(){
-    Parent.write("componentDidMount");
+    Parent.write("componentDidMount",false);
 }
 
 // --- snapshot is return from getSnapshotBeforeUpdate
@@ -107,11 +114,11 @@ componentDidUpdate(prevProps, prevState, snapshot){
         prevProps : prevProps,
         prevState : prevState,
         snapshot : snapshot};
-    Parent.write("componentDidUpdate" , args);
+    Parent.write("componentDidUpdate" ,false, args);
 }
 
 componentWillUnmount(){
-    Parent.write("componentWillUnmount");
+    Parent.write("componentWillUnmount",false);
 }
 
 }

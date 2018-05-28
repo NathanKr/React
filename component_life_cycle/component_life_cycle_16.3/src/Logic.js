@@ -1,11 +1,14 @@
 
 class Logic{
-    static write (className , funcName,msg) {
-        if(msg === undefined)
+    static write (className , funcName,ignore ,msg) {
+        if(!ignore)
         {
-            msg = '';
+            if(msg === undefined)
+            {
+                msg = '';
+            }
+            console.log(className,funcName,msg);
         }
-        console.log(className,funcName,msg);
     }
 }
 
