@@ -83,7 +83,13 @@ Provide a tool to understand and feel component life cycle including changes int
   </tr>
   <tr>
     <td>Parent</th>
-    <td><ul><li>Implement all life cycle methods as described before</li><li>Allow setState , forceUpdate and new props to Child by means of buttons</li><li>Allow to toggle the return value of its shouldComponentUpdate method by means of checkbox</li><ul></th> 
+    <td><ul><li>Implement all life cycle methods as described before</li><li>Allow actions by buttons
+<ul>
+<li>setState</li>
+<li>forceUpdate</li>
+<li>new props to Child</li>
+</ul>
+<li>Allow to toggle the return value of its shouldComponentUpdate method by means of checkbox</li><ul></th> 
   </tr>
 <tr>
     <td>Child</th>
