@@ -73,7 +73,13 @@ Provide a tool to understand and feel component life cycle including changes int
   </tr>
   <tr>
     <td>App</th>
-    <td><ul><li>host Parent</li><li>Allow less console logs by means of checkbox</li></ul></th> 
+    <td>
+    <ul>
+    <li>Host Parent</li>
+    <li>Allow less console logs by means of checkbox</li>
+    <li>Provide links to documentation and sequence diagram</li>
+    </ul>
+    </th> 
   </tr>
   <tr>
     <td>Parent</th>
