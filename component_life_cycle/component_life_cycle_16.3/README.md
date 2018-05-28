@@ -72,8 +72,12 @@ Provide a tool to understand and feel component life cycle including changes int
     <th>Description</th> 
   </tr>
   <tr>
+    <td>App</th>
+    <td><ul><li>host Parent</li><li>Allow less console logs by means of checkbox</li></ul></th> 
+  </tr>
+  <tr>
     <td>Parent</th>
-    <td>Implement all life cycle methods as described before. Allow setState , forceUpdate and pass props to child by means of buttons</th> 
+    <td><ul><li>Implement all life cycle methods as described before</li><li>Allow setState , forceUpdate and new props to Child by means of buttons</li><li>Allow to toggle the return value of its shouldComponentUpdate method by means of checkbox</li><ul></th> 
   </tr>
 <tr>
     <td>Child</th>
