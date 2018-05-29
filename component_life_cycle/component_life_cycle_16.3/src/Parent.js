@@ -68,7 +68,7 @@ class Parent extends Component {
     );
   }
 
-  shouldComponentUpdate(){
+  shouldComponentUpdate(nextProps, nextState){
     const shouldComponentUpdate = this.state.shouldComponentUpdate;
     Parent.write(   "shouldComponentUpdate" , 
                     this.props.ignoreConsoleLessCommon,

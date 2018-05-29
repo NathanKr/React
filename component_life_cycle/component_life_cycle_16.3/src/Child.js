@@ -16,7 +16,7 @@ class Child extends Component{
         return <h3 style={{margin : '10px' , border:'1px solid aqua'}}>Child component -> props got from parent : {this.props.children}</h3>;
     }
 
-    shouldComponentUpdate(){
+    shouldComponentUpdate(nextProps, nextState){
         const shouldComponentUpdate = true;
         Child.write(   "shouldComponentUpdate" , 
                         this.props.ignoreConsoleLessCommon,
