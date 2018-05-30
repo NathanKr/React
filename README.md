@@ -78,4 +78,4 @@
 
 
 <h3>License</h3>
-All projects in this React repository are MIT licensed.
+All projects in this React repository are MIT licensed. Copyright (c) Nathan Krasney 2018.
