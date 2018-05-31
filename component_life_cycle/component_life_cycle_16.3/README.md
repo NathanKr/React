@@ -105,4 +105,6 @@ Provide a tool to understand and feel component life cycle including changes int
 <li>getSnapshotBeforeUpdate of Parent return snapshot</li>
 
 
+<h2>Preview</h2>
+<a href='https://www.youtube.com/watch?v=fnam1yrlnU8&t=145s'>Five minutes video<a>
 
