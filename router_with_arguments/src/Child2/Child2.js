@@ -3,6 +3,8 @@ import React from 'react';
 
 function Child2(props)
 {
+    console.log(props);
+    
     const query = new URLSearchParams(props.location.search);
 
     return (
