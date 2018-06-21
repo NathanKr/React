@@ -6,33 +6,33 @@ import Options from '../Logic/Options'
 
 class VacationList extends Component{
     
-    state = {   listToDo : [] , // array of object todoDescription , todoIsActive
+    state = {   listVacations : [] , // array of object vacationDescription , vacationIsActive
                 selectedOptionIndex : 0};
 
-    addTodoHandler = (todoDescription) => {
-        if(todoDescription)
+    addVacationHandler = (vacationDescription) => {
+        if(vacationDescription)
         {
-            let newList = [...this.state.listToDo];
-            newList.push({todoDescription : todoDescription , todoIsActive : true});    
+            let newList = [...this.state.listVacations];
+            newList.push({vacationDescription : vacationDescription , vacationIsActive : true});    
             console.log(newList);   
-            this.setState({listToDo : newList});
+            this.setState({listVacations: newList});
         }
     };
 
 
-    toggleIsActiveHandler = (indexTodoListItem) =>{
-        let newList = [...this.state.listToDo];
-        newList[indexTodoListItem].todoIsActive = !newList[indexTodoListItem].todoIsActive;
-        this.setState({listToDo : newList});
+    toggleIsActiveHandler = (indexVacationListItem) =>{
+        let newList = [...this.state.listVacations];
+        newList[indexVacationListItem].vacationIsActive = !newList[indexVacationListItem].vacationIsActive;
+        this.setState({listVacation : newList});
     }
 
     render()
     {
         return (
         <div>
-            <AddVacation addTodo = {this.addTodoHandler}/>
+            <AddVacation addVacation = {this.addVacationHandler}/>
 
-            <ShownVacationList  listToDo={this.state.listToDo} 
+            <ShownVacationList  listVacation={this.state.listVacations} 
                             toggleIsActiveHandler = {this.toggleIsActiveHandler}
                             option={Options.options[this.state.selectedOptionIndex]}/>
 

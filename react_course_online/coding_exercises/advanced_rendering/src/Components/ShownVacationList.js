@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Options from '../Logic/Options';
 import VacationListItem from '../Components/VacationListItem';
 
@@ -17,11 +16,11 @@ function ShownVacationList(props){
             break;
     
             case Options.ACTIVE:
-            bShow = item.todoIsActive;
+            bShow = item.vacationIsActive;
             break;
     
             case Options.COMPLETED:
-            bShow = !item.todoIsActive;
+            bShow = !item.vacationIsActive;
             break;
     
             default:
@@ -32,7 +31,7 @@ function ShownVacationList(props){
     }
 
 
-    elements = props.listToDo.map((item,index) =>{
+    elements = props.listVacation.map((item,index) =>{
         return showItem(props.option,item) ?  <VacationListItem  
         clickHandler={
          () => props.toggleIsActiveHandler(index)
@@ -44,10 +43,6 @@ function ShownVacationList(props){
 return(<ol style={{display:'inline-block'}}>{elements}</ol>);
 }
 
-ShownVacationList.propTypes = {
-    listToDo : PropTypes.array.isRequired,
-    option : PropTypes.string.isRequired,
-    toggleIsActiveHandler : PropTypes.func.isRequired
-};
+
 
 export default ShownVacationList ;

@@ -1,7 +1,6 @@
 import React  from 'react';
 import FilterOption from '../Components/FilterOption';
 import Options from '../Logic/Options';
-import PropTypes from 'prop-types';
 
 
 function FilterVacationList (props){
@@ -22,10 +21,5 @@ function FilterVacationList (props){
         </div>);
     
 }
-
-FilterVacationList.propTypes = {
-    setSelectedOptionIndex : PropTypes.func.isRequired,
-    selectedOptionIndex :  PropTypes.number.isRequired
-};
 
 export default FilterVacationList;

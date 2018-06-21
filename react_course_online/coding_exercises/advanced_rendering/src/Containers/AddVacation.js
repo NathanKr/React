@@ -1,26 +1,23 @@
 import React , {Component} from 'react';
-import PropTypes from 'prop-types';
 
-class AddToDo extends Component 
+class AddVacation extends Component 
 {
-    state = {todoDescription : ''};
+    state = {vacationDescription : ''};
 
     render()
     {
         return (
             <div>
                 <input type='text' onChange={(evt) => {
-                    this.setState({todoDescription : evt.target.value})
+                    this.setState({vacationDescription : evt.target.value})
                 }}/>
                 <button onClick={() =>{
-                    this.props.addTodo(this.state.todoDescription);
+                    this.props.addVacation(this.state.vacationDescription);
                 }}>Add Vacation</button>
             </div>);
     }
 }
 
-AddToDo.propTypes = {
-    addTodo : PropTypes.func.isRequired
-};
 
-export default AddToDo;
+
+export default AddVacation;
