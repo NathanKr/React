@@ -1,0 +1,8 @@
+.Input {
+    padding: 10px;
+    margin: 10px 0;
+    /* border and padding are included in height\width */
+    box-sizing: border-box;
+    border: 1px solid #cbd4db;
+    border-radius: 5px;
+}

@@ -21,7 +21,7 @@ This is a sample for advanced rendering - list and key
 
 <tr>
 <td>VacationList</td>
-<td>Vactions container</td>
+<td>Vactions container and render them</td>
 <td>Stateful</td>
 </tr>
 
