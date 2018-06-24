@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import VacationList from './Containers/VacationList'
+import VacationList from './Components/VacationList'
 
 class App extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React , {Component}  from 'react';
 import FilterVacationList from '../Components/FilterVacationList';
-import AddVacation from './AddVacation';
+import AddVacation from '../Components/AddVacation';
 import ShownVacationList from '../Components/ShownVacationList';
 import Options from '../Logic/Options'
 
@@ -30,6 +30,7 @@ class VacationList extends Component{
     {
         return (
         <div>
+            <h2>Vacations Wish List</h2>
             <AddVacation addVacation = {this.addVacationHandler}/>
 
             <ShownVacationList  listVacation={this.state.listVacations} 
