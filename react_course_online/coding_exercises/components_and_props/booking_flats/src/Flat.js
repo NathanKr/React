@@ -8,6 +8,8 @@ function Flat(props){
         <p>{props.grade}</p>
         <p>{props.location}</p>
         <p>{props.description}</p>
+        <hr/>
+        <br/>
     </div>
 }
 
