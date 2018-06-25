@@ -1,0 +1,14 @@
+.History table{
+    border: 1px solid grey;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.History tr:nth-child(even) {
+    background-color: lightgray;
+}
+.History th , td {
+   padding: 10px;
+   text-align: left;
+   border: 1px solid grey;
+        }

@@ -1,0 +1,17 @@
+.AddBook div {
+    background-color: #F2F2F2;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* multiple selector : select input and select */
+.AddBook input  {
+     width: 100%;
+     padding: 10px;
+     margin: 10px 0;
+     /* border and padding are included in height\width */
+     box-sizing: border-box;
+     border: 1px solid #cbd4db;
+     border-radius: 5px;
+ }
