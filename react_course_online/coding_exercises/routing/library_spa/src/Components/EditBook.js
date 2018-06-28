@@ -8,6 +8,7 @@ class EditBook extends Component {
     constructor(props){
         super(props);
         const book = this.props.getBookAfterEdit();
+        console.log(book);
         this.name = book.name;
         this.numPages = book.numPages;
         this.isNew = book.isNew;
@@ -41,7 +42,7 @@ class EditBook extends Component {
             defaultValue = {this.numPages}/>
     <br/>
     <label><input onChange={isNewChangeHandler} type='checkbox'
-            defaultValue = {this.isNew}
+            defaultChecked = {this.isNew}
     />new</label>
     <br/>
     <button onClick = {saveClickHandler}>Save</button>
