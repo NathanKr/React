@@ -8,11 +8,18 @@ This is a sample for component life cycle
 <th>Description</th>
 <th>Stateless \ Stateful</th>
 </tr>
+
 <tr>
 <td>Library</td>
 <td>
 <ul>
 <li>Root component</li>
+<li>Has child components</li>
+<li><ul>
+<li>AddBook</li>
+<li>Books</li>
+<li>History</li>
+</ul></li>
 <li>State 
 <ul>
 <li> listBooks</li>

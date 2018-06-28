@@ -1,0 +1,36 @@
+.Library 
+{
+  text-align: center;
+  padding : 10px;
+}
+
+.Library button{
+  margin: 10px;
+  padding : 8px;
+  background-color: Black;
+  color: white;
+}
+
+.Library button:hover { 
+  background-color: brown;
+}
+
+.Library h1{
+  color:brown;
+}
+
+.Library a{
+  display:inline-block;
+  width:150px;
+  margin:10px;
+  padding:8px;
+  font-weight: bold;
+  background-color:black;
+  color:white;
+  border:1px solid black;
+  text-decoration: none;
+}
+
+.Library a:hover{
+  background-color:brown;
+}

@@ -15,7 +15,7 @@ function History(props){
         </tr>
     });
     return <div className = 'History'>
-        <h3>History</h3>
+        <h1>History</h1>
         <table>
         <thead>
             <tr>
