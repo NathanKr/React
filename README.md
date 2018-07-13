@@ -73,7 +73,7 @@
 <h3>More info on React</h3>
 <ul>
   <li>https://reactjs.org/</li>
-  <li>React online course i am working on - due Late June 2018</li>
+  <li><li><a href='https://www.udemy.com/learn-react-in-a-better-way/?couponCode=15USD_100C'>My course : Learn React in a Better Way</a></li></li>
 </ul>
 
 
