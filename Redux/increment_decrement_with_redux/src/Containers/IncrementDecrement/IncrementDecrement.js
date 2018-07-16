@@ -8,11 +8,10 @@ class IncrementDecrement extends Component {
   render() {
     return (
         <div>
-            <p>got {this.props.count}</p>
-            <button>Increment by 1</button>
-            <button>Decrement by 1</button>
-            <button>Fast Increment</button>
-            <button>Fast Decrement</button>
+            <button onClick={ () => this.props.setCount(1)}>Increment by 1</button>
+            <button onClick={ () => this.props.setCount(-1)}>Decrement by 1</button>
+            <button onClick={ () => this.props.setCount(10)}>Fast Increment</button>
+            <button onClick={ () => this.props.setCount(-10)}>Fast Decrement</button>
         </div>
     );
   }
