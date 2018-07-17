@@ -51,19 +51,19 @@
 </tr>
 <tr>
 <td>mapStateToProps</td>
-<td>maps state.count to this.props.cnt </td>
+<td>Maps state.count to this.props.cnt </td>
 </tr>
 <tr>
 <td>mapDispatchToProps</td>
-<td>maps dispatch to this.props.countHandler</td>
+<td>Maps dispatch to this.props.countHandler</td>
 </tr>
 <tr>
 <td>connect</td>
-<td>connect redux store to component</td>
+<td>Connect redux store to component</td>
 </tr>
 <tr>
 <td>reducer.jd</td>
-<td>defined a reducer to handle counter operation (return a new state , as any reducer does)</td>
+<td>Defines a reducer to handle counter operation (return a new state , as any reducer does)</td>
 </tr>
 </table>
 
