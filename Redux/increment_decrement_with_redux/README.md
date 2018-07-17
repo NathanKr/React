@@ -28,7 +28,7 @@
 </li>
 </ul>
 </td>
-<td>None</td>
+<td><ul><li>value - cnt</li><li>function - countHandler</li></ul></td>
 </tr>
 <tr>
 <td>IncrementDecrement</td>
@@ -48,6 +48,10 @@
 <tr>
 <th>Name</th>
 <th>Description</th>
+</tr>
+<tr>
+<td>Props passed by react-redux</td>
+<td>Props defined by mapStateToProps - cnt and mapDispatchToProps - countHandler are passed to App component by react-redux</td>
 </tr>
 <tr>
 <td>mapStateToProps</td>
