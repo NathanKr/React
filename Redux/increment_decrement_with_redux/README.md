@@ -61,6 +61,10 @@
 <td>connect</td>
 <td>connect redux store to component</td>
 </tr>
+<tr>
+<td>reducer.jd</td>
+<td>defined a reducer to handle counter operation (return a new state , as any reducer does)</td>
+</tr>
 </table>
 
 <h3>Installation</h3>
