@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import IncrementDecrement from './Containers/IncrementDecrement/IncrementDecrement';
+import IncrementDecrement from './IncrementDecrement';
 import {connect} from 'react-redux' ;
 import ActionType from './Logic/ActionType';
 
@@ -8,8 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Increment \ Decrement using Redux</h1>
         <IncrementDecrement count={this.props.cnt} setCount={this.props.countHandler}/>
-        <p>count :{this.props.cnt}</p>
       </div>
     );
   }

@@ -1,6 +1,69 @@
-<h3>Increment Decrement with Redux</h3>
+<h2>Increment Decrement using Redux</h2>
 
-<h4>Specific packages installation</h4>
+<h3>Motivation</h3>
+
+<ul>
+<li>Simple app to understand redux in react</li>
+<li>Compare with this <a href='https://github.com/NathanKr/React/tree/master/Redux/increment_decrement_no_redux'> non redux but same functionality sample</a></li> so you can better grasp the difference betwwen handling the state explicitly using state object or implicitly via redux store 
+
+</ul>
+
+<h3>Components</h3>
+<table border="1">
+<tr>
+<th>Name</th><th>Description</th><th>Props</th>
+</tr>
+<tr>
+<td>App</td>
+<td>
+<ul>
+<li>Root component</li>
+<li>Parent of IncrementDecrement</li>
+<li>Smart component - uses redux store and connect</li>
+<li>Has two important functions
+<ul>
+<li>mapStateToProps</li>
+<li>mapDispatchToProps</li>
+</ul>
+</li>
+</ul>
+</td>
+<td>None</td>
+</tr>
+<tr>
+<td>IncrementDecrement</td>
+<td>
+<ul>
+<li>Has 4 buttons for increment\decrement of the counter</li>
+<li>Dumb component</li>
+<li>Shows the counter value</li>
+</ul>
+</td>
+<td><ul><li>value - count</li><li>function - setCount</li></ul></td>
+</tr>
+</table>
+
+<h3>React-redux points of interest</h3>
+<table border="1">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>mapStateToProps</td>
+<td>maps state.count to this.props.cnt </td>
+</tr>
+<tr>
+<td>mapDispatchToProps</td>
+<td>maps dispatch to this.props.countHandler</td>
+</tr>
+<tr>
+<td>connect</td>
+<td>connect redux store to component</td>
+</tr>
+</table>
+
+<h3>Installation</h3>
 <ul>
   <li>npm install redux</li>
   <li>npm install react-redux</li>

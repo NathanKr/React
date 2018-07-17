@@ -1,6 +1,6 @@
 import ActionType from '../Logic/ActionType';
 
-const initialState = {count : 11};
+const initialState = {count : 0};
 
 const reducer = (state =  initialState, action) =>{
     console.log("reducer",state);
