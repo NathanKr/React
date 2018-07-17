@@ -5,6 +5,11 @@ import {connect} from 'react-redux' ;
 import ActionType from './Logic/ActionType';
 
 class App extends Component {
+
+  componentDidUpdate(prevProps, prevState, snapshot){
+    console.log("props passed to App by react-redux",prevProps,prevState);
+}
+
   render() {
     return (
       <div className="App">
