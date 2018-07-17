@@ -62,7 +62,7 @@
 <td>Connect redux store to component</td>
 </tr>
 <tr>
-<td>reducer.jd</td>
+<td>reducer.js</td>
 <td>Defines a reducer to handle counter operation (return a new state , as any reducer does)</td>
 </tr>
 </table>
