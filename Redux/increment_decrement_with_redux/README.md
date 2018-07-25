@@ -61,9 +61,16 @@
 <td>mapDispatchToProps</td>
 <td>Maps dispatch to this.props.countHandler</td>
 </tr>
+
+<tr>
+<td>Provider</td>
+<td>HOC used to connect redux to react</td>
+</tr>
+<tr>
+
 <tr>
 <td>connect</td>
-<td>Connect redux store to component</td>
+<td>Function used to connect redux store to component</td>
 </tr>
 <tr>
 <td>reducer.js</td>

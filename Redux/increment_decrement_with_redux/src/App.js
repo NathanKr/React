@@ -22,13 +22,13 @@ class App extends Component {
 
 const mapStateToProps = state =>{
   return{
-    cnt : state.count  // this.props.cnt is mapped to state.count
+    cnt : state.count  // this.props.cnt is mapped to state.count (store)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    // --- // this.props.countHandler is mapped to dispatch
+    // --- // this.props.countHandler is mapped to dispatch (redux)
     countHandler : payLoad => dispatch({type:ActionType.ADD , payLoad:payLoad})};
 };
 
