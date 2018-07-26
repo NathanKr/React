@@ -44,13 +44,13 @@ const userReducer = (state = {}, action) => {
     return state;
 };
 
-const reducer = combineReducers({
+const rootReducer = combineReducers({
     books : booksReducer,
     user  : userReducer
 });
 
 // --- no need to define here initialState it is define in reducers
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 // --- subscribe is optional
 store.subscribe(() => console.log("store has changed",store.getState()));

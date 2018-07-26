@@ -38,7 +38,7 @@ This sample performs three operations which are logged to the console :
   </tr>
 <tr>
 <td>createStore</td>
-<td>argument is reducer , no need for initial state because it is set per reducer</td>
+<td>argument is the root reducer , no need for initial state because it is set per reducer</td>
 </tr>
 
   <tr>
