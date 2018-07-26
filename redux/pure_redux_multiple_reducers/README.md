@@ -48,6 +48,8 @@ This sample performs three operations which are logged to the console :
 <li>function of redux</li>
 <li>return a list that map state key to reducer function</li>
 <li>the reducer pay load is set to the state key that the reducer is mapped to</li>
+<li>the benefit of this design is that it allow each reducer to touch only state that relate to him</li>
+
 </ul>
 </td>
   </tr>
@@ -82,4 +84,4 @@ This sample performs three operations which are logged to the console :
   <li>npm install redux</li>
 </ul>
   
-    
+  
