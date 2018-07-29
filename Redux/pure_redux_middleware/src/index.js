@@ -1,13 +1,19 @@
-import {applyMiddleware , createStore} from 'redux'
+import {applyMiddleware , createStore} from 'redux';
+import logger from 'redux-logger';
+
+
 const addType = "ADD";
  let initialState = {count : 0};
 
-const logger = (store) => (next) => (action) => {
-    console.log("LOGGER action fired : ",action);
+const myLogger = (store) => (next) => (action) => {
+    console.log("myLogger action fired : ",action);
     next(action);// call next otherwise reducer will not be called
 }
 
-const middleware = applyMiddleware(logger);
+const middleware = applyMiddleware(
+    myLogger , 
+    logger
+);
 
 const reducer = (state,action) =>{
     const newCount = (action.type === addType) ? (state.count + action.payLoad) : state.count;
