@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
-import IncrementDecrement from './Containers/IncrementDecrement/IncrementDecrement';
-import {connect} from 'react-redux' 
+import IncrementDecrement from './IncrementDecrement';
+import {connect} from 'react-redux' ;
+import ActionType from './Logic/ActionType';
 
 class App extends Component {
+
+  componentDidUpdate(prevProps, prevState, snapshot){
+    console.log("props passed to App by react-redux",prevProps,prevState);
+}
+
   render() {
     return (
       <div className="App">
-        <IncrementDecrement count={mapStateToProps.cnt} />
-        <p>count : get_count_from_state</p>
+        <h1>Increment \ Decrement using Redux</h1>
+        <IncrementDecrement count={this.props.cnt} setCount={this.props.countHandler}/>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = state =>{
   return{
-    cnt : state.count  // cnt is mapped to state
+    cnt : state.count  // this.props.cnt is mapped to state.count (store)
   };
 };
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => {
+  return {
+    // --- // this.props.countHandler is mapped to dispatch (redux)
+    countHandler : payLoad => dispatch({type:ActionType.ADD , payLoad:payLoad})};
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
+

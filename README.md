@@ -15,6 +15,7 @@
     <li>Context</li>
 	<li>HOC</li>
   <li>Ref</li>
+  <li>Pure redux and react redux</li>
 </li>
   </ul>  
   
@@ -51,7 +52,8 @@
   </tr>
   <tr>
     <td>Beginner React Developer</td>
-    <td><ol><li>react_max_assignment_1</li><li>react_max_assignment_2 </li><li> Redux/todolist_no_redux </li><li> tic_tac_toe </li><li> router example </li><li>component life cycle examples</li><li> axios examples </li><li> form examples </li><li> authentication examples</li><li> context examples</li><li>HOC examples</li><li>Ref examples</li></ol></td> 
+    <td><ol><li>react_max_assignment_1</li><li>react_max_assignment_2 </li><li> Redux/todolist_no_redux </li><li> tic_tac_toe </li><li> Router example </li><li>Component life cycle examples</li><li> Axios examples </li><li> Form examples </li><li> Authentication examples</li><li>Ref examples</li>
+</ol></td> 
   </tr>
   <tr>
     <td>Advanced React Developer</td>
@@ -59,6 +61,8 @@
     <ol>
     <li>An excellent starting project for every React project which uses authentication - Authentication/authentication_server_firebase</li>
     <li>Generic & easy to use form component - Forms/form_simple_input_with_validation usefull</li>
+    <li> Context examples</li><li>HOC examples</li>
+    <li>Pure redux and react redux increment decrement counter examples</li>
     </ol>
     </td> 
   </tr>

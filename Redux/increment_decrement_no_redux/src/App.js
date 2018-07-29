@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import IncrementDecrement from './Containers/IncrementDecrement/IncrementDecrement';
+import IncrementDecrement from './IncrementDecrement';
 
 class App extends Component {
   state = {count : 0};
@@ -12,8 +12,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Increment \ Decrement without Redux</h1>
         <IncrementDecrement count={this.state.count} setCount= {this.setCount}/>
-        <p>count : {this.state.count}</p>
       </div>
     );
   }
