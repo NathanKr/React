@@ -11,6 +11,7 @@ Show async conecpt in Redux
 </ul>
 
 <h3>Show me some code</h3>
+
 ```javascript
 
 store.dispatch(dispatch => {
@@ -27,6 +28,7 @@ store.dispatch(dispatch => {
     });
 
 });
+
 ```
 
 
