@@ -12,6 +12,7 @@ Show async conecpt in Redux
 
 <h3>Show me some code</h3>
 ```javascript
+
 store.dispatch(dispatch => {
     dispatch({type:'FETCH_POSTS_START'});
 
