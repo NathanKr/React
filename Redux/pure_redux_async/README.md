@@ -3,6 +3,31 @@
 <h3>Motivation</h3>
 Show async conecpt in Redux 
 
+<h3>State</h3>
+<table border=1>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>posts</td>
+<td>posts fetched from https://jsonplaceholder.typicode.com/posts</td>
+</tr>
+<tr>
+<td>loading</td>
+<td>true during fetching of posts , false otherwise</td>
+</tr>
+<tr>
+<td>loaded</td>
+<td>true when all posts are fetched , false otherwise</td>
+</tr>
+<tr>
+<td>err</td>
+<td>load error</td>
+</tr>
+</table>
+
+
 <h3>Points of interest</h3>
 <ul>
 <li>Async operations are not implemented in reducer because it is pure function</li>
@@ -11,9 +36,7 @@ Show async conecpt in Redux
 </ul>
 
 <h3>Show me some code</h3>
-
 ```javascript
-
 store.dispatch(dispatch => {
     dispatch({type:'FETCH_POSTS_START'});
 
@@ -28,7 +51,6 @@ store.dispatch(dispatch => {
     });
 
 });
-
 ```
 
 
