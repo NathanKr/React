@@ -8,6 +8,9 @@
 
 </ul>
 
+<h3>State</h3>
+State has count which contains the counter value
+
 <h3>Components</h3>
 <table border="1">
 <tr>
