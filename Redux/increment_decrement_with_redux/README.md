@@ -1,4 +1,4 @@
-<h2>Increment Decrement using Redux</h2>
+<h2>Increment Decrement using react-redux</h2>
 
 <h3>Motivation</h3>
 

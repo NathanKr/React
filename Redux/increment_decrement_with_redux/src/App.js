@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Increment \ Decrement using Redux</h1>
+        <h1>Increment \ Decrement using react-redux</h1>
         <IncrementDecrement count={this.props.cnt} setCount={this.props.countHandler}/>
       </div>
     );
