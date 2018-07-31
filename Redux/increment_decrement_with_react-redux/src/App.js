@@ -29,7 +29,9 @@ const mapStateToProps = state =>{
 const mapDispatchToProps = dispatch => {
   return {
     // --- // this.props.countHandler is mapped to dispatch (redux)
-    countHandler : payLoad => dispatch({type:ActionType.ADD , payLoad:payLoad})};
+    countHandler : number => dispatch({
+      type:ActionType.ADD , 
+      payLoad:number})};
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);
