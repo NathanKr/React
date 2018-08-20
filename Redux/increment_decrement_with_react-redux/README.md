@@ -5,7 +5,7 @@
 <ul>
 <li>Simple app to understand redux in react</li>
 <li>Compare with this <a href='https://github.com/NathanKr/React/tree/master/Redux/increment_decrement_no_redux'> non redux but same functionality sample</a></li> so you can better grasp the difference betwwen handling the state explicitly using state object or implicitly via redux store 
-
+<li>store is configured so redux devtools extension will work , check createStore in index.js</li>
 </ul>
 
 <h3>State</h3>
