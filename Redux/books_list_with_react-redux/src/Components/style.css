@@ -1,0 +1,26 @@
+.App{
+    margin:10px;
+}
+
+.Books{
+    float: left;
+    background-color: lightgray;
+}
+
+ ul{
+    margin:0;
+}
+
+
+li{
+    font-weight: bold;
+    margin: 15px 5px;
+}
+
+
+.CurrentBook{
+    background-color: lightgray;
+    float: left;
+    margin-left: 10px;
+    padding: 0 10px;
+}

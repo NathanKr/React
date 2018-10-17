@@ -1,11 +1,13 @@
 {
-  "name": "booking_flats",
+  "name": "increment_decrement_with_redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
