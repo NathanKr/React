@@ -25,7 +25,7 @@ class Alert extends Component
         switch(status)
         {
             case Alert.getSuccess() :
-            color = 'Green';
+            color = 'green';
             break;
 
             case Alert.getError() :
