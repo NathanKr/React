@@ -2,10 +2,8 @@
 This is a small POC to check how the same editor can be used on every array based elements
 
 <h2>Show me some code</h2>
-```javascript
-
+```JavaScript
 <Editor subject={Page1} />
-
 ```
 
 <h2>Specific installation</h2>
