@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+ul {
+  /*  הסר בולטים מהרשימה*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  /* תתיחס לאלמנטים הנ"ל כמו בלוק על מנת שהצבע יתיחס למלבן - בלוק */
+  display: block;
+  color: black;
+  /* הצגה יותר אסטטית של האלמנטים ברשימה*/
+  padding: 8px 16px;
+  /* הסר עיטור טקסט כך שלא יראה כמו לינק */
+  text-decoration: none;
+}
+  /* שנה את צבע הלינק במעבר עליו */
+  li a:hover {
+      background-color: #555555;
+      color: white;
+  }
