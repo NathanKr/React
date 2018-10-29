@@ -2,7 +2,6 @@ import React from "react";
 
 class Editor extends React.Component {
   state = {
-    currentPageName: null,
     Page1: [1, 2, 3],
     Page2: [4, 5, 6, 7]
   };

@@ -16,6 +16,7 @@
 	<li>HOC</li>
   <li>Ref</li>
   <li>Pure redux and react redux</li>
+  <li>Render props</li>
 </li>
   </ul>  
   
@@ -62,7 +63,8 @@
     <li>An excellent starting project for every React project which uses authentication - Authentication/authentication_server_firebase</li>
     <li>Generic & easy to use form component - Forms/form_simple_input_with_validation usefull</li>
     <li> Context examples</li><li>HOC examples</li>
-    <li>Pure redux and react redux increment decrement counter examples</li>
+    <li>Pure redux and react redux examples</li>
+    <li>Render props example</li>
     </ol>
     </td> 
   </tr>

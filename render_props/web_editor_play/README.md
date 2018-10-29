@@ -8,6 +8,11 @@ functionality of edit is common cross pages but view of pages is different. solu
 <li>use array of elements to handle logic</li>
 </ul>
 
+<h2>Points of interest</h2>
+<ul>
+<li>Currently i have put the state inside Editor because its above the pages in the hierarchy tree and easy for pass props to pages level. But this is logically not the right place. A neutral place would be better like store implemented e.g. via redux</li>
+</ul>
+
 <h2>Components</h2>
 <table>
   <tr>

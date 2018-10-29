@@ -3,7 +3,7 @@ import Editor from "./Editor";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import './App.css'
+import "./App.css";
 
 class App extends Component {
   state = { func: Page1 };
