@@ -1,63 +1,29 @@
 import React, { Component } from "react";
-import "./App.css";
+import DropDownMenu from "./DropDownMenu";
+import DefaultListItem from "./DefaultListItem";
 
 class App extends Component {
-  state = {
-    showMenu: false,
-  };
+  arItems = [
+    { href: "http://ynet.co.il", text: "Home" },
+    { href: "https://edition.cnn.com/", text: "News" },
+    { href: "http://www.sport5.co.il/", text: "Sport" }
+  ];
 
   render() {
-    const menu = (
-      <ul
-        style={{
-          position: "absolute",
-          opacity: this.state.showMenu ? 1 : 0,
-          transition: "opacity 2s"
-        }}
-        onMouseLeave={() => {
-          this.setState({
-            ...this.state,
-            showMenu: false,
-          });
-        }}
-      >
-        <li>
-          <a href="/Home">Home</a>
-        </li>
-        <li>
-          <a href="#news">News</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-      </ul>
-    );
-
     return (
-      <div className="App">
-        {/*<h2>hover over the button to show the drop down menu</h2>
-        <h2>
-          move the mouse from the menu\button will hide the drop down menu
-        </h2>*/}
-        <button
-          style={{ marginBottom: "10px" }}
-          onMouseEnter={(info) => {
-            console.log(info);
-            this.setState({
-              ...this.state,
-              showMenu: true,
-            });
-          }}
-          onMouseLeave={() => {
-            this.setState({ ...this.state, showMenu: false });
-          }}
-        >
-          Hover Me
-        </button>
-        {menu}
+      <div>
+        <h3>hover over the button to show the drop down menu</h3>
+        <h3>
+          move the mouse from the button left|right|top will hide the drop down
+          menu
+        </h3>
+        <h3>move the mouse from the drop down menu will hide it</h3>
+        <h3>click on menu item to navigate</h3>
+        <DropDownMenu
+          items={this.arItems}
+          text="Hover Me"
+          listItem={DefaultListItem}
+        />
       </div>
     );
   }

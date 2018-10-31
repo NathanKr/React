@@ -1,17 +1,24 @@
-.App {
-  width: 120px;
+.DropDownMenu {
+  padding: 10px;
 }
 
- ul {
+.DropDownMenu button{
+  margin-bottom: 10px;
+
+}
+
+.DropDownMenu ul {
   /*  הסר בולטים מהרשימה*/
   list-style-type: none;
+  position: absolute;
+  transition : opacity 2s;
   margin: 0;
   padding: 0;
   width: 120px;
   background-color: #f1f1f1;
 }
 
- li a {
+.DropDownMenu li a {
   /* תתיחס לאלמנטים הנ"ל כמו בלוק על מנת שהצבע יתיחס למלבן - בלוק */
   display: block;
   color: black;
@@ -20,8 +27,9 @@
   /* הסר עיטור טקסט כך שלא יראה כמו לינק */
   text-decoration: none;
 }
+
 /* שנה את צבע הלינק במעבר עליו */
- li a:hover {
+.DropDownMenu li a:hover {
   background-color: #555555;
   color: white;
 }
