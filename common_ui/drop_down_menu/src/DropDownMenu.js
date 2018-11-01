@@ -44,18 +44,18 @@ class DropDownMenu extends Component {
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
+    console.log("componentWillUnmount");
     window.removeEventListener("resize", this.onWindowResize);
   }
 
   render() {
-    const items = this.props.items.map((item,index) => (
+    const items = this.props.items.map((item, index) => (
       <li key={index}>
         {this.props.listItemComponent({ href: item.href, text: item.text })}
       </li>
     ));
 
-    const menu = (
+    const menuItems = (
       <ul
         style={{
           opacity: this.state.showMenu ? 1 : 0
@@ -71,30 +71,34 @@ class DropDownMenu extends Component {
       </ul>
     );
 
-    return (
-      <div className="DropDownMenu">
-        <button
-          ref={this.titleRef}
-          onMouseEnter={() => {
-            this.setState({
-              ...this.state,
-              showMenu: true
-            });
-          }}
-          onMouseLeave={e => {
-            const showMenu =
-              this.leaveSide(
-                this.titleRect,
-                e.nativeEvent.clientX,
-                e.nativeEvent.clientY
-              ) === "bottom";
+    const menuTitle = (
+      <span
+        ref={this.titleRef}
+        onMouseEnter={() => {
+          this.setState({
+            ...this.state,
+            showMenu: true
+          });
+        }}
+        onMouseLeave={e => {
+          const showMenu =
+            this.leaveSide(
+              this.titleRect,
+              e.nativeEvent.clientX,
+              e.nativeEvent.clientY
+            ) === "bottom";
 
-            this.setState({ ...this.state, showMenu });
-          }}
-        >
-          {this.props.text}
-        </button>
-        {menu}
+          this.setState({ ...this.state, showMenu });
+        }}
+      >
+        {this.props.text}
+      </span>
+    );
+
+    return (
+      <div className="DropDownMenu" >
+        {menuTitle}
+        {menuItems}
       </div>
     );
   }

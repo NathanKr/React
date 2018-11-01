@@ -1,5 +1,7 @@
 .DropDownMenu {
   padding: 10px;
+  display: inline-block;
+  width: 120px;
 }
 
 .DropDownMenu button{

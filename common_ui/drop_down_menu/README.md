@@ -10,7 +10,7 @@ Build a common drop down menu component - DropDownMenu that can be used easyly i
 </ul>
 
 <h2>Features</h2>
-<li>the menu is composed of button as menu title and list of link based component</li>
+<li>the menu is composed of span as menu title and list of link based component</li>
 <li>link based component e.g. DefaultListItem is passed as render props </li>
 <li>hover over menu title will show the menu. hiding is also done nicely</li>
 <li>attractive ui</li>
@@ -38,4 +38,5 @@ Build a common drop down menu component - DropDownMenu that can be used easyly i
 <h2>Future work</h2>
 <ul>
 <li>flexible styling - pass class name to DropDownMenu as argument ?</li>
+<li>currently the spacing on the horizontal menu are not even (ue npm start to see this). this is because the width of the DropDownMenu is 120px. A better solution is required here</li>
 </ul>
