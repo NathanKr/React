@@ -19,11 +19,11 @@ class App extends Component {
         </h3>
         <h3>move the mouse from the drop down menu will hide it</h3>
         <h3>click on menu item to navigate</h3>
-        <DropDownMenu
-          items={this.arItems}
-          text="Hover Me"
-          listItem={DefaultListItem}
-        />
+          <DropDownMenu
+            items={this.arItems}
+            text="Hover Me"
+            listItemComponent={DefaultListItem}
+          />
       </div>
     );
   }

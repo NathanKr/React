@@ -6,14 +6,15 @@ class DropDownMenu extends Component {
     showMenu: false
   };
 
-  buttonRef = React.createRef();
-  buttonRect;
+  titleRef = React.createRef();
+  titleRect;
 
   onWindowResize = () => {
     this.setRect();
   };
+
   setRect = () => {
-    this.buttonRect = this.buttonRef.current.getBoundingClientRect();
+    this.titleRect = this.titleRef.current.getBoundingClientRect();
   };
 
   leaveSide = (elementBoundingRect, leaveX, leaveY) => {
@@ -35,18 +36,24 @@ class DropDownMenu extends Component {
   componentDidMount() {
     this.setRect();
     console.log(
-      `componentDidMount \nbuttonRect.x : ${
-        this.buttonRect.x
-      } , buttonRect.y : ${this.buttonRect.y}`
+      `componentDidMount \ntitleRect.x : ${this.titleRect.x} , titleRect.y : ${
+        this.titleRect.y
+      }`
     );
     window.addEventListener("resize", this.onWindowResize);
   }
 
-  render() {
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+    window.removeEventListener("resize", this.onWindowResize);
+  }
 
-    const items = this.props.items.map(item =>
-      <li>{this.props.listItem({ href: item.href, text: item.text })}</li>
-    );
+  render() {
+    const items = this.props.items.map((item,index) => (
+      <li key={index}>
+        {this.props.listItemComponent({ href: item.href, text: item.text })}
+      </li>
+    ));
 
     const menu = (
       <ul
@@ -67,7 +74,7 @@ class DropDownMenu extends Component {
     return (
       <div className="DropDownMenu">
         <button
-          ref={this.buttonRef}
+          ref={this.titleRef}
           onMouseEnter={() => {
             this.setState({
               ...this.state,
@@ -77,7 +84,7 @@ class DropDownMenu extends Component {
           onMouseLeave={e => {
             const showMenu =
               this.leaveSide(
-                this.buttonRect,
+                this.titleRect,
                 e.nativeEvent.clientX,
                 e.nativeEvent.clientY
               ) === "bottom";

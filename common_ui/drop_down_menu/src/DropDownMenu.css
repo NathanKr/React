@@ -4,7 +4,8 @@
 
 .DropDownMenu button{
   margin-bottom: 10px;
-
+  border:none;
+  background: none;
 }
 
 .DropDownMenu ul {
