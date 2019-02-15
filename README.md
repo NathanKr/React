@@ -17,6 +17,7 @@
   <li>Ref</li>
   <li>Pure redux and react redux</li>
   <li>Render props</li>
+  <li>Hooks</li>
 </li>
   </ul>  
   
@@ -65,6 +66,7 @@
     <li> Context examples</li><li>HOC examples</li>
     <li>Pure redux and react redux examples</li>
     <li>Render props example</li>
+    <li>Hooks example</li>
     </ol>
     </td> 
   </tr>
