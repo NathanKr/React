@@ -9,6 +9,16 @@ const Login = () => {
     console.log(`login : name - ${name} , password - ${password}`);
   };
 
+  /* --- true if length >= 5
+   --- why do i need it as custom hook ? */
+  const useIsPasswordValid = () => {
+    return password && password.length >= 5;
+  };
+
+    const stylePassword = {
+    backgroundColor: useIsPasswordValid() ? "white" : "red"
+  };
+
 
   return (
     <div>
@@ -24,6 +34,7 @@ const Login = () => {
           type="password"
           placeholder="insert password"
           onChange={evt => setPassword(evt.target.value)}
+          style={stylePassword}
         />
         <br />
 
