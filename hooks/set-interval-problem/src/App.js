@@ -1,26 +1,17 @@
-import React, { useEffect , useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
+import SetIntervalGood from "./SetIntervalGood";
+import SetIntervalBad from "./SetIntervalBad";
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    console.log("useEffect");
-    setInterval(() => {
-      setCounter(counter + 1)
-      console.log('callback is called')
-    }, 1000);
-  }, []);
+  const [isGood, setIsGood] = useState(true);
 
   return (
-    <div>
-      <p>
-        setCounter is invoked inside the callback of setInterval which is invoked every 1 sec but state reset
-        every time --> problem !!
-      </p>
-      <button onClick={() => setCounter(counter + 1)}>
-        Click to increment the counter
-      </button>
-      <p>{counter}</p>
+    <div className="App">
+    <p>Hooks are used to increment a counter once every 1000ms</p>
+      <button onClick={() => setIsGood(true)}>SetIntervalGood</button>
+      <button onClick={() => setIsGood(false)}>SetIntervalBad</button>
+      {isGood ? <SetIntervalGood /> : <SetIntervalBad />}
     </div>
   );
 };
