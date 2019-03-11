@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-class ResourceListComponent extends Component {
+class ResourceListComponentUsingClass extends Component {
   baseUrl = "https://jsonplaceholder.typicode.com/";
   state = { resources: [] };
 
@@ -25,14 +25,24 @@ class ResourceListComponent extends Component {
     }
   }
 
+  
+
   render() {
+    const resourcesElements = (
+      <ul>
+        {this.state.resources.map(item => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
+    );
+
     return (
       <div>
         <h2>{this.props.resource}</h2>
-        <p>{this.state.resources.length}</p>
+        {resourcesElements}
       </div>
     );
   }
 }
 
-export default ResourceListComponent;
+export default ResourceListComponentUsingClass;
