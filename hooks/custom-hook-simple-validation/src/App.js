@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Login from './Login'
+import LoginWithCustomHook from './LoginWithCustomHook';
 
 class App extends Component {
   handleSubmit = () =>{}
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Login/>
+        <LoginWithCustomHook/>
       </div>
     );
   }
