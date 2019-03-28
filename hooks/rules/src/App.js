@@ -1,18 +1,43 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { Button, Input, Dropdown } from "semantic-ui-react";
 
 const App = () => {
-  const [importance, setImportance] = useState("low");
+  const [importance, setImportance] = useState("");
   if (importance === "high") {
     useEffect(() => console.log(`important idea : ${idea}`));
   }
   const [idea, setIdea] = useState("");
   const [ideas, setIdeas] = useState([]);
 
+  const importances = [
+    { value: "low", text: "Low" },
+    { value: "medium", text: "Medium" },
+    { value: "high", text: "High" }
+  ];
+
+  const getColor = value => {
+    switch (value) {
+      case "low":
+        return "blue";
+
+      case "medium":
+        return "orange";
+
+      case "high":
+        return "red";
+
+      default:
+        return "";
+    }
+  };
+
   const elements = (
     <ul>
       {ideas.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li style={{ color: item.color }} key={index}>
+          {item.text}
+        </li>
       ))}
     </ul>
   );
@@ -20,26 +45,45 @@ const App = () => {
   return (
     <div className="App">
       <h2>high importance will cause error</h2>
-      <input placeholder="enter idea ..." onChange={evt => setIdea(evt.target.value)} />
+
       <br />
-      <select
-        value={importance}
-        onChange={evt => setImportance(evt.target.value)}
-      >
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-      </select>
+      <Dropdown selection text="Select importance">
+        <Dropdown.Menu>
+          {importances.map((it, index) => (
+            <Dropdown.Item
+              style={{ color: getColor(it.value) }}
+              text={it.text}
+              value={it.value}
+              key={index}
+              onClick={() => {
+                setImportance(it.value);
+              }}
+            />
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
       <br />
-      <button
+      <br />
+      <Input
+        placeholder="enter idea ..."
+        onChange={evt => setIdea(evt.target.value)}
+        value={idea}
+      />
+      <br />
+      <br />
+      <Button
+        disabled={importance === "" || idea === ""}
+        primary
         onClick={() => {
           let newIdeas = [...ideas];
-          newIdeas.push(idea);
+          newIdeas.push({ text: idea, color: getColor(importance) });
           setIdeas(newIdeas);
+          setImportance("");
+          setIdea("");
         }}
       >
         Add idea
-      </button>
+      </Button>
       {elements}
     </div>
   );
