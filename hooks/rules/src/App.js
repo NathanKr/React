@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { Button, Input, Dropdown } from "semantic-ui-react";
+import { Button, Input, Dropdown , Form, FormField } from "semantic-ui-react";
 
 const App = () => {
   const [importance, setImportance] = useState("");
@@ -46,7 +46,8 @@ const App = () => {
     <div className="App">
       <h2>high importance will cause error</h2>
 
-      <br />
+      <Form>
+       <Form.Field>
       <Dropdown selection text="Select importance">
         <Dropdown.Menu>
           {importances.map((it, index) => (
@@ -62,15 +63,15 @@ const App = () => {
           ))}
         </Dropdown.Menu>
       </Dropdown>
-      <br />
-      <br />
+      </Form.Field> 
+       <Form.Field>
       <Input
         placeholder="enter idea ..."
         onChange={evt => setIdea(evt.target.value)}
         value={idea}
       />
-      <br />
-      <br />
+      </Form.Field> 
+       <Form.Field>
       <Button
         disabled={importance === "" || idea === ""}
         primary
@@ -84,6 +85,8 @@ const App = () => {
       >
         Add idea
       </Button>
+      </Form.Field> 
+      </Form>
       {elements}
     </div>
   );
