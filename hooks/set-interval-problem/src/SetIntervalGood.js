@@ -4,9 +4,9 @@ const SetIntervalGood = () => {
   const [counter, setCounter] = useState(0);
   const counterRef = useRef(); // --- get reference to counter because callback of setInterval is defined once
 
-  useEffect(() => {
+  //  useEffect is not need because this is not side effect     useEffect(() => {
     counterRef.current = counter;
-  }); //this function is invoked after every render
+ // }); //this function is invoked after every render
 
   useEffect(() => {
     // --- setInterval is called on the first render - on Mount
