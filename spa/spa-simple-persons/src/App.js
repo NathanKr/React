@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Home from "./Home";
 import Persons from "./Persons";
 import AddPerson from "./AddPerson";
+import EditPerson from "./EditPerson";
 
 class App extends Component {
   state = {
@@ -13,9 +14,24 @@ class App extends Component {
     ]
   };
 
+  currentPersonIndex = null;
+
+  personClickHandler = index => {
+    this.currentPersonIndex = index;
+  };
+
+  editPerson = (name, age) => {
+    let tmpPersons = [...this.state.persons];
+    tmpPersons[this.currentPersonIndex].name = name;
+    tmpPersons[this.currentPersonIndex].age = age;
+    this.setState({ persons: tmpPersons });
+    this.currentPersonIndex = null;
+  };
+
+
   addPerson = (name, age) => {
     let tmpPersons = [...this.state.persons];
-    // -- following is possible when key and value is same 
+    // -- following is possible when key and value is same
     tmpPersons.push({ name, age });
     this.setState({ persons: tmpPersons });
   };
@@ -32,12 +48,22 @@ class App extends Component {
             <Route
               exact
               path="/Persons"
-              render={() => <Persons persons={this.state.persons} />}
+              render={() => (
+                <Persons
+                  personClickHandler={this.personClickHandler}
+                  persons={this.state.persons}
+                />
+              )}
             />
             <Route
               exact
               path="/AddPerson"
               render={() => <AddPerson addPerson={this.addPerson} />}
+            />
+            <Route
+              exact
+              path="/EditPerson"
+              render={() => <EditPerson editPerson={this.editPerson} />}
             />
           </Switch>
         </div>
