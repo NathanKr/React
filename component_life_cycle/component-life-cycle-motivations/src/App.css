@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.App input{
+  width : 300px;
+}
+
+.App button{
+  margin : 10px;
+}
