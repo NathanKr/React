@@ -81,7 +81,8 @@
 <h3>More info on React</h3>
 <ul>
   <li>https://reactjs.org/</li>
-  <li><a href='https://www.udemy.com/learn-react-in-a-better-way/?couponCode=15USD_100C'>My course : Learn React in a Better Way</a></li>
+  <li><a href='https://www.udemy.com/course/learn-react-in-a-better-way/?referralCode=4299350292063C517597'>My course : Learn React in a Better Way</a></li>
+  <li><a href='https://www.udemy.com/course/learn-react-hooks-in-a-better-way/?referralCode=B2E5AC5DE2762AB8A667'>My course : Learn React Hooks in a Better Way</a></li>
 </ul>
 
 
