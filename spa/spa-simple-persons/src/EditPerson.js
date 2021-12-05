@@ -7,12 +7,11 @@ import { Redirect } from "react-router-dom";
 class EditPerson extends Component {
   state = { navigate: false };
 
-  name = this.props.currentPerson.name;
-  age = this.props.currentPerson.age;
+  name = this.props.currentPerson ? this.props.currentPerson.name : undefined;
+  age = this.props.currentPerson ? this.props.currentPerson.age : undefined;
 
   render() {
-    console.log(this.props.currentPerson);
-    if (this.state.navigate) {
+    if (this.state.navigate || !this.props.currentPerson) {
       return <Redirect to="/Persons" />;
     }
 
