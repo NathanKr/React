@@ -13,8 +13,8 @@ class App extends Component {
             <Link to={'/Login'}>Login</Link>
         <hr />
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/Login' component={Login} />
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/Login' component={Login}/>
           </Switch>
         </div>
       </BrowserRouter>
