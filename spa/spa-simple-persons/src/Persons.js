@@ -24,6 +24,7 @@ class Persons extends Component {
     return (
       <div>
         <h2>Persons</h2>
+        <p>click item to edit</p>
         {elements}
       </div>
     );

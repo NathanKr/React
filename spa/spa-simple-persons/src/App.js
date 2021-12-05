@@ -10,13 +10,13 @@ class App extends Component {
   state = {
     persons: [
       { name: "Nathan", age: 56 },
-      { name: "Yael", age: 26 }
-    ]
+      { name: "Yael", age: 26 },
+    ],
   };
 
   currentPersonIndex = null;
 
-  personClickHandler = index => {
+  personClickHandler = (index) => {
     this.currentPersonIndex = index;
   };
 
@@ -27,7 +27,6 @@ class App extends Component {
     this.setState({ persons: tmpPersons });
     this.currentPersonIndex = null;
   };
-
 
   addPerson = (name, age) => {
     let tmpPersons = [...this.state.persons];
@@ -43,6 +42,7 @@ class App extends Component {
           <Link to="/">Home</Link>
           <Link to="/Persons">Persons</Link>
           <Link to="/AddPerson">AddPerson</Link>
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route
@@ -63,7 +63,12 @@ class App extends Component {
             <Route
               exact
               path="/EditPerson"
-              render={() => <EditPerson editPerson={this.editPerson} />}
+              render={() => (
+                <EditPerson
+                  editPerson={this.editPerson}
+                  currentPerson={this.state.persons[this.currentPersonIndex]}
+                />
+              )}
             />
           </Switch>
         </div>
