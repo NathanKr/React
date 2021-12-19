@@ -20,6 +20,7 @@ class Library extends Component {
      };
 
      indexEditedBook = null;
+     indexDeletedBook = null;
 
      handleOperationTypeChange = (id ,datetime , type,  name , numPages ,isNew) =>{
         let newListOperations = [...this.state.listOperations];
@@ -45,7 +46,8 @@ class Library extends Component {
          {
             // book deleted
             operationType = OperationType.delete();
-            book = prevState.listBooks[prevState.listBooks.length-1];
+            // book = prevState.listBooks[prevState.listBooks.length-1]; this is a bug if deleted is not last
+            book = prevState.listBooks[this.indexDeletedBook];
          }
 
          if(operationType){
@@ -77,6 +79,7 @@ class Library extends Component {
         }
 
     const deleteBook = (index) =>{
+        this.indexDeletedBook = index;
         let newListBook = [...this.state.listBooks];
         newListBook.splice(index, 1);
         this.setState({listBooks : newListBook});
