@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';import axios from 'axios'
 
+const PROJECT_ID = 'react-course-backend-53cce';
+
+
 class App extends Component {
- baseUrl = 'https://react-course-backend-53cce.firebaseio.com';
+ baseUrl = `https://${PROJECT_ID}.firebaseio.com`;
  index = 0;
  firbaseAddOn = '.json';
  state = {error:'' , loading:''};
