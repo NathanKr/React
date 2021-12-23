@@ -1,5 +1,8 @@
 <h3>Authentication using Firebase</h3>
 
+<h4>Firebase project</h4>
+react-course-authentication
+
 
 <h4>Sign Up</h4>
 <ol>
